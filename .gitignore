@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Logs & Temporary files
+*.log
+__pycache__/
+*.pyc
+
+# Local Backup Archives
+*.zip
+*.tar.gz
