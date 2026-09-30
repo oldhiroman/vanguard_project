@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>AIS Vanguard Sales Hub — Version 1.0 Release Notes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700;800&family=Sarabun:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 10mm 12mm 10mm 12mm;
+    }
+    body {
+      font-family: 'Sarabun', sans-serif;
+      color: #1e293b;
+      background-color: #ffffff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Prompt', sans-serif;
+    }
+    .page-container {
+      width: 100%;
+      height: 275mm;
+      max-height: 275mm;
+      box-sizing: border-box;
+      page-break-after: always;
+      break-after: page;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+    .page-container:last-child {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+    .ais-gradient {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 55%, #064e3b 100%);
+    }
+  </style>
+</head>
+<body class="bg-white text-slate-800 text-[12px] leading-relaxed p-0">
+
+  <!-- ==================== PAGE 1 ==================== -->
+  <div class="page-container">
+    <div class="space-y-3.5">
+      <!-- Header Banner -->
+      <div class="ais-gradient rounded-xl p-4 text-white shadow-md relative overflow-hidden">
+        <div class="flex items-center justify-between relative z-10">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-lg bg-lime-400 text-slate-950 flex items-center justify-center font-black text-xl font-heading shadow-sm">
+              A
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="text-[10px] uppercase tracking-widest text-lime-400 font-bold font-heading">Official Platform Release</span>
+                <span class="bg-lime-400/20 text-lime-300 text-[9px] font-bold px-2 py-0.5 rounded-full border border-lime-400/40">v1.0.0 Stable</span>
+              </div>
+              <h1 class="text-xl font-extrabold font-heading mt-0.5 tracking-tight text-white">AIS Vanguard Sales Hub</h1>
+              <p class="text-[11px] text-slate-300">Sales Enablement Platform for SME & Enterprise Solutions • AWN / AIS Business</p>
+            </div>
+          </div>
+          <div class="text-right text-[11px] text-slate-300 space-y-0.5">
+            <div class="font-bold text-white font-heading">30 กันยายน 2569</div>
+            <div>Target: 300+ BC / AE Nationwide</div>
+            <div class="text-[10px] text-lime-400 font-mono">Confidential • For Internal Sales Use</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Executive Summary Card -->
+      <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50/80 space-y-2">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <h2 class="text-sm font-bold text-slate-900 font-heading">1. บทสรุปผู้บริหาร (Executive Summary)</h2>
+        </div>
+        <p class="text-slate-700 text-[11.5px] leading-relaxed text-justify">
+          <strong>AIS Vanguard Sales Hub (Version 1.0)</strong> คือแพลตฟอร์ม Sales Enablement แบบครบวงจรที่พัฒนาขึ้นเพื่อปฏิวัติวงจรการขายบริการโทรคมนาคมและดิจิทัลโซลูชันสำหรับลูกค้าองค์กร (Enterprise & SME) ของ <strong>AIS Business / บริษัท แอดวานซ์ ไวร์เลส เน็ทเวอร์ค จำกัด (AWN)</strong> โดยรวมศูนย์ข้อมูลที่เคยกระจัดกระจายให้เป็น <strong>Single Pane of Glass</strong> ช่วยให้พนักงานขาย (Business Consultant: BC) สามารถค้นหาโซลูชัน, เปิดประเด็นด้วยสตอรี่วิดีโอเคสจริง, และ <strong>สร้างใบเสนอราคาทางการ (Draft Quotation PDF 2 หน้า A4) ได้เสร็จสิ้นภายใน 5 นาทีต่อหน้าลูกค้า</strong> ลดระยะเวลา Sales Cycle ลงกว่า <strong>85%</strong>
+        </p>
+        <div class="grid grid-cols-3 gap-2.5 pt-0.5 text-center">
+          <div class="p-2 bg-white rounded-lg border border-slate-200 shadow-2xs">
+            <div class="text-base font-extrabold text-emerald-600 font-heading">5 นาที</div>
+            <div class="text-[10px] text-slate-500">ออกใบเสนอราคาต่อหน้าลูกค้า (จากเดิม 1–3 วัน)</div>
+          </div>
+          <div class="p-2 bg-white rounded-lg border border-slate-200 shadow-2xs">
+            <div class="text-base font-extrabold text-emerald-600 font-heading">12 Solutions</div>
+            <div class="text-[10px] text-slate-500">ครอบคลุม 5 เสาหลัก & 5 กลุ่มธุรกิจสำคัญ</div>
+          </div>
+          <div class="p-2 bg-white rounded-lg border border-slate-200 shadow-2xs">
+            <div class="text-base font-extrabold text-emerald-600 font-heading">3 วิดีโอเคสจริง</div>
+            <div class="text-[10px] text-slate-500">Pop-up Theater Modal & Consultative Tips</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 1: 5 Pillars Architecture & Screenshot -->
+      <div class="space-y-2">
+        <div class="flex items-center justify-between border-b border-slate-200 pb-1">
+          <h2 class="text-sm font-bold text-slate-900 font-heading flex items-center gap-1.5">
+            <span>🏛️</span> 2. โครงสร้าง 5 เสาหลักโซลูชัน และแดชบอร์ดหลัก (Dashboard Architecture)
+          </h2>
+          <span class="text-[10px] text-slate-500 font-mono">Business Needs > Product Talk</span>
+        </div>
+        <p class="text-slate-600 text-[11px]">
+          จัดหมวดหมู่ 12 โซลูชันตามความต้องการทางธุรกิจจริง แบ่งเป็น 5 เสาหลัก: <strong>1) Network & Connectivity</strong>, <strong>2) Cybersecurity & CSOC</strong>, <strong>3) AIS Cloud & Workplace</strong>, <strong>4) Backup & Data Resilience</strong>, และ <strong>5) Smart Business & Communication</strong> พร้อมระบบตัวกรอง 5 กลุ่มอุตสาหกรรม (สำนักงาน, โรงงาน, โรงแรม, ค้าปลีก, ขนส่ง)
+        </p>
+        <div class="rounded-lg border border-slate-300 overflow-hidden shadow-xs bg-slate-900">
+          <img src="shot_eds_dashboard.png" alt="AIS Vanguard 5 Pillars Dashboard" class="w-full max-h-[310px] object-cover object-top">
+          <div class="px-2.5 py-1.5 bg-slate-900 text-slate-300 text-[10px] flex justify-between items-center border-t border-slate-800">
+            <span class="font-medium">ภาพที่ 1: แดชบอร์ดหลัก แสดง 5 เสาหลัก, ตัวกรองอุตสาหกรรม และการ์ดโซลูชัน Corporate Internet (EDS)</span>
+            <span class="text-lime-400 font-mono">Dashboard View</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page Footer -->
+    <div class="pt-2 border-t border-slate-200 flex items-center justify-between text-slate-400 text-[10px]">
+      <div>AIS Vanguard Sales Hub • Version 1.0 Official Release Notes</div>
+      <div class="font-mono">Page 1 of 5</div>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE 2 ==================== -->
+  <div class="page-container">
+    <div class="space-y-3.5">
+      <!-- Feature 2: Customer Video Proof Suite -->
+      <div class="space-y-2">
+        <div class="flex items-center justify-between border-b border-slate-200 pb-1">
+          <h2 class="text-sm font-bold text-slate-900 font-heading flex items-center gap-1.5">
+            <span>🎬</span> 3. วิดีโอสตอรี่เคสลูกค้าจริง (AIS Customer Video Proof Suite)
+          </h2>
+          <span class="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full font-semibold">Pop-up Theater Modal</span>
+        </div>
+        <p class="text-slate-600 text-[11px]">
+          ระบบเล่นวิดีโอสตอรี่จริงในรูปแบบ <strong>Pop-up Theater Modal (16:9 HD)</strong> ไม่เปิดแท็บใหม่และไม่หลุดจากหน้างาน พร้อมแท็บสลับเคสลูกค้า (Switcher Tabs), คำแนะนำสำหรับทีมขาย (Story Pitching Tips), และปุ่มดาวน์โหลดคลิปออฟไลน์
+        </p>
+
+        <!-- Screenshot EDS Video Modal -->
+        <div class="rounded-lg border border-slate-300 overflow-hidden shadow-xs bg-slate-900">
+          <img src="shot_eds_modal.png" alt="Corporate Internet Customer Video Modal" class="w-full max-h-[300px] object-cover object-top">
+          <div class="px-2.5 py-1.5 bg-slate-900 text-slate-300 text-[10px] flex justify-between items-center border-t border-slate-800">
+            <span class="font-medium">ภาพที่ 2: Pop-up Video Modal หมวด EDS (เคส บมจ. ศรีสวัสดิ์ พาวเวอร์ 1979 & กลุ่ม KTIS)</span>
+            <span class="text-lime-400 font-mono">Multi-Branch & Industrial Case</span>
+          </div>
+        </div>
+
+        <!-- Video Proof Items & Pitching Tips -->
+        <div class="grid grid-cols-2 gap-2.5 text-xs">
+          <div class="p-2.5 rounded-lg border border-slate-200 bg-slate-50 space-y-0.5">
+            <div class="font-bold text-slate-900 font-heading flex items-center justify-between text-[11.5px]">
+              <span>1. บมจ. ศรีสวัสดิ์ พาวเวอร์ 1979</span>
+              <span class="text-[9.5px] text-slate-500 font-mono">1:50 นาที</span>
+            </div>
+            <p class="text-slate-600 text-[11px]">เชื่อมโยงระบบสาขาหลายพันแห่งทั่วไทยอย่างไร้รอยต่อ เน้นความเสถียร 99.9% และทีมวิศวกรดูแล 24 ชั่วโมง</p>
+          </div>
+          <div class="p-2.5 rounded-lg border border-slate-200 bg-slate-50 space-y-0.5">
+            <div class="font-bold text-slate-900 font-heading flex items-center justify-between text-[11.5px]">
+              <span>2. กลุ่ม บมจ. เกษตรไทยฯ (KTIS)</span>
+              <span class="text-[9.5px] text-slate-500 font-mono">2:01 นาที</span>
+            </div>
+            <p class="text-slate-600 text-[11px]">โครงข่าย EDS เชื่อมต่อสำนักงานใหญ่ โรงงานอุตสาหกรรม และพื้นที่เกษตรกรรมห่างไกล สัญญาณครอบคลุม</p>
+          </div>
+        </div>
+
+        <!-- Strategic Consultative Pitching Tips Box -->
+        <div class="p-3 rounded-xl border border-emerald-300 bg-emerald-50/70 text-emerald-950 space-y-1.5 text-xs">
+          <div class="font-bold font-heading text-emerald-900 flex items-center gap-1.5 text-[11.5px]">
+            <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+            <span>ชุดคำพูดเปิดใจลูกค้า (Consultative Selling Wording Tips สำหรับ EDS):</span>
+          </div>
+          <ul class="list-disc list-inside space-y-1 text-slate-700 text-[11px] leading-relaxed">
+            <li><em>“สิ่งที่ AIS อยากส่งมอบไม่ใช่เพียงวงจร EDS แต่คือความมั่นใจว่า Network AIS จะพร้อมสนับสนุนทุก Solution ขององค์กรลูกค้าค่ะ”</em></li>
+            <li><em>“วันนี้เราไม่อยากให้ตัดสินใจเพียงจากราคาที่เห็น แต่อยากให้มองถึงผลกระทบต่อธุรกิจในวันที่ Network เป็นสิ่งที่องค์กรขาดไม่ได้ค่ะ และ Network ที่เสถียร และพร้อม Service หลังการขายตลอด 24 ชม.”</em></li>
+            <li><em>“สำหรับองค์กรของลูกค้าระดับนี้ Network ไม่ใช่แค่ระบบหลังบ้าน แต่เป็นโครงสร้างสำคัญของธุรกิจ ให้ AIS ช่วยดูแลความพร้อม เพื่อให้ธุรกิจเดินหน้าได้อย่างมั่นใจนะคะ”</em></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page Footer -->
+    <div class="pt-2 border-t border-slate-200 flex items-center justify-between text-slate-400 text-[10px]">
+      <div>AIS Vanguard Sales Hub • Version 1.0 Official Release Notes</div>
+      <div class="font-mono">Page 2 of 5</div>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE 3 ==================== -->
+  <div class="page-container">
+    <div class="space-y-3.5">
+      <!-- Feature 3: Corporate WiFi & MFU Case -->
+      <div class="space-y-2">
+        <div class="flex items-center justify-between border-b border-slate-200 pb-1">
+          <h2 class="text-sm font-bold text-slate-900 font-heading flex items-center gap-1.5">
+            <span>📶</span> 4. โซลูชัน Corporate WiFi & เคส มหาวิทยาลัยแม่ฟ้าหลวง (MFU Digital University)
+          </h2>
+          <span class="text-[10px] bg-lime-100 text-lime-800 px-2 py-0.5 rounded-full font-semibold">Wi-Fi 6 Enterprise</span>
+        </div>
+        <p class="text-slate-600 text-[11px]">
+          เพิ่มวิดีโอสตอรี่จริงในหมวด <strong>Corporate WiFi (NET-WF-01)</strong> เคส <strong>มหาวิทยาลัยแม่ฟ้าหลวง (`WIFIDigitalUniversity.mp4`, 3:25 นาที)</strong> ชูศักยภาพ High-Density Concurrency รองรับการเชื่อมต่อพร้อมกันนับหมื่นเครื่อง จัดการผ่าน Centralized Cloud Controller
+        </p>
+
+        <!-- Screenshot WiFi Video Modal -->
+        <div class="rounded-lg border border-slate-300 overflow-hidden shadow-xs bg-slate-900">
+          <img src="shot_wifi_modal.png" alt="Corporate WiFi MFU Customer Video Modal" class="w-full max-h-[300px] object-cover object-top">
+          <div class="px-2.5 py-1.5 bg-slate-900 text-slate-300 text-[10px] flex justify-between items-center border-t border-slate-800">
+            <span class="font-medium">ภาพที่ 3: Pop-up Video Modal หมวด Corporate WiFi (เคส มหาวิทยาลัยแม่ฟ้าหลวง อัปเกรด Wi-Fi 6)</span>
+            <span class="text-lime-400 font-mono">Campus & High-Density Wi-Fi 6</span>
+          </div>
+        </div>
+
+        <!-- WiFi Pitch Tips -->
+        <div class="p-3 rounded-xl border border-lime-300 bg-lime-50/70 text-slate-900 space-y-1.5 text-xs">
+          <div class="font-bold font-heading text-slate-900 flex items-center gap-1.5 text-[11.5px]">
+            <span class="w-2 h-2 rounded-full bg-lime-600"></span>
+            <span>ชุดคำพูดเปิดใจลูกค้า (Consultative Selling Wording Tips สำหรับ Corporate WiFi):</span>
+          </div>
+          <ul class="list-disc list-inside space-y-1 text-slate-700 text-[11px] leading-relaxed">
+            <li><em>“Corporate WiFi จาก AIS ไม่ใช่แค่การติดเราเตอร์ แต่คือการวางรากฐาน Digital Infrastructure ที่รองรับผู้ใช้งานพร้อมกันหนาแน่น (High Density Concurrency) ได้อย่างแท้จริงค่ะ”</em></li>
+            <li><em>“จัดการผ่าน Cloud Centralized Dashboard ควบคุมนโยบายความปลอดภัยและแยกท่อผู้ใช้งานได้ง่าย ไม่จำเป็นต้องมีผู้เชี่ยวชาญด้าน IT ประจำทุกจุด”</em></li>
+            <li><em>“ไม่ว่าจะเป็นสถานศึกษา โรงแรม โรงพยาบาล หรือสำนักงานใหญ่ AIS พร้อมออกแบบและติดตั้งด้วยมาตรฐานระดับองค์กร พร้อมทีมดูแลตลอด 24 ชั่วโมงค่ะ”</em></li>
+          </ul>
+        </div>
+
+        <!-- Multi-Branch Transformation Note -->
+        <div class="p-3 rounded-lg border border-amber-200 bg-amber-50 text-amber-950 text-xs space-y-1">
+          <div class="font-bold font-heading text-amber-900 text-[11.5px]">🎯 Multi-Branch Pain Point Transformation ("มีหลายสาขา"):</div>
+          <p class="text-[11px] leading-relaxed">
+            ปรับเปลี่ยนแกนการขาย Corporate Internet จากการเน้นสเปกความเร็ว เป็นการแก้ปัญหาธุรกิจที่มีหลายสาขา เช่น ระบบ POS หน้าร้านหลุด, กล้อง CCTV ออฟไลน์, การเชื่อม VPN กลับสำนักงานใหญ่ล่ม และตัดวงจรการรอช่าง 1-2 วัน ด้วย SLA MTTR ซ่อมเสร็จใน 4 ชั่วโมง
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page Footer -->
+    <div class="pt-2 border-t border-slate-200 flex items-center justify-between text-slate-400 text-[10px]">
+      <div>AIS Vanguard Sales Hub • Version 1.0 Official Release Notes</div>
+      <div class="font-mono">Page 3 of 5</div>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE 4 ==================== -->
+  <div class="page-container">
+    <div class="space-y-3.5">
+      <!-- Feature 4: Official AWN Draft Quotation PDF Generator -->
+      <div class="space-y-2">
+        <div class="flex items-center justify-between border-b border-slate-200 pb-1">
+          <h2 class="text-sm font-bold text-slate-900 font-heading flex items-center gap-1.5">
+            <span>📑</span> 5. เครื่องมือสร้างใบเสนอราคา Draft Quotation PDF (AWN 2 หน้า A4)
+          </h2>
+          <span class="text-[10px] bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full font-semibold">Standard AWN Template</span>
+        </div>
+        <p class="text-slate-600 text-[11px]">
+          ระบบคำนวณราคาและสร้างใบเสนอราคามาตรฐานของ <strong>บริษัท แอดวานซ์ ไวร์เลส เน็ทเวอร์ค จำกัด (AWN)</strong> ทันทีใน 30 วินาที พร้อมพรีวิวแบบ Real-time ขนาด 2 หน้า A4 และปุ่มพิมพ์/บันทึก PDF ทันทีต่อหน้าลูกค้า
+        </p>
+
+        <!-- Screenshot Quotation Modal -->
+        <div class="rounded-lg border border-slate-300 overflow-hidden shadow-xs bg-slate-900">
+          <img src="shot_quotation_modal.png" alt="AWN Official Draft Quotation Modal" class="w-full max-h-[300px] object-cover object-top">
+          <div class="px-2.5 py-1.5 bg-slate-900 text-slate-300 text-[10px] flex justify-between items-center border-t border-slate-800">
+            <span class="font-medium">ภาพที่ 4: หน้าต่างสร้างและพรีวิวใบเสนอราคาทางการ AWN Draft Quotation (Editable & Live A4 Preview)</span>
+            <span class="text-lime-400 font-mono">Print & Download Ready (html2pdf)</span>
+          </div>
+        </div>
+
+        <!-- Quotation Specs Breakdown -->
+        <div class="grid grid-cols-2 gap-2.5 text-xs">
+          <div class="p-2.5 rounded-lg border border-slate-200 bg-slate-50 space-y-1">
+            <div class="font-bold text-slate-900 font-heading text-[11.5px]">📄 Page 1: ข้อมูลราคา & แพ็กเกจ</div>
+            <ul class="list-disc list-inside text-slate-600 space-y-0.5 text-[10.5px]">
+              <li>ข้อมูลบริษัทลูกค้า, ผู้ติดต่อ, ที่อยู่ และพิกัดติดตั้ง</li>
+              <li>ตารางค่าบริการแรกเข้า (One Time Charge) เว้นค่าติดตั้ง 100%</li>
+              <li>ค่าบริการรายเดือน (Monthly Charge) ตามสปีด Bandwidth</li>
+              <li>คำนวณ VAT 7% และยอดสุทธิ พร้อม <strong>Thai BahtText</strong> อัตโนมัติ</li>
+            </ul>
+          </div>
+          <div class="p-2.5 rounded-lg border border-slate-200 bg-slate-50 space-y-1">
+            <div class="font-bold text-slate-900 font-heading text-[11.5px]">📜 Page 2: เงื่อนไขทางการค้า 9 ข้อ</div>
+            <ul class="list-disc list-inside text-slate-600 space-y-0.5 text-[10.5px]">
+              <li>เงื่อนไขระยะเวลาสัญญา (12/24/36 เดือน) และส่วนลดพิเศษ</li>
+              <li>การันตี Service Level Agreement (SLA 99.9%) ซ่อมด่วนใน 4 ชม.</li>
+              <li>คู่สายบริการหลังการขาย Enterprise Call Center 1149 (24 ชม.)</li>
+              <li>กรอบลงนามระหว่างตัวแทน AWN และผู้มีอำนาจลงนามของลูกค้า</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page Footer -->
+    <div class="pt-2 border-t border-slate-200 flex items-center justify-between text-slate-400 text-[10px]">
+      <div>AIS Vanguard Sales Hub • Version 1.0 Official Release Notes</div>
+      <div class="font-mono">Page 4 of 5</div>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE 5 ==================== -->
+  <div class="page-container">
+    <div class="space-y-3">
+      <!-- Feature 5: Executive Presentation Deck -->
+      <div class="space-y-1.5">
+        <div class="flex items-center justify-between border-b border-slate-200 pb-1">
+          <h2 class="text-sm font-bold text-slate-900 font-heading flex items-center gap-1.5">
+            <span>📊</span> 6. สไลด์นำเสนอผู้บริหาร (Executive Deck) & ฟีเจอร์ยกระดับประสบการณ์
+          </h2>
+          <span class="text-[10px] bg-purple-100 text-purple-800 px-2 py-0.5 rounded-full font-semibold">Web-Based Deck & i18n</span>
+        </div>
+        <p class="text-slate-600 text-[11px]">
+          ชุดสไลด์นำเสนอเชิงกลยุทธ์ 4 หน้า (`executive_deck.html`) พร้อมลิ้นชักบทพูด (Speaker Notes) และฟีเจอร์ Bilingual (🇹🇭 / 🇬🇧), Executive Dark Mode และ Marquee Ticker ข่าวสารเรียลไทม์
+        </p>
+
+        <!-- Screenshot Executive Deck -->
+        <div class="rounded-lg border border-slate-300 overflow-hidden shadow-xs bg-slate-900">
+          <img src="shot_executive_deck.png" alt="Executive Presentation Deck" class="w-full max-h-[175px] object-cover object-top">
+          <div class="px-2 py-1 bg-slate-900 text-slate-300 text-[9.5px] flex justify-between items-center border-t border-slate-800">
+            <span class="font-medium">ภาพที่ 5: สไลด์นำเสนอผู้บริหาร (Slide 1: As-Is Friction vs To-Be Vanguard Solution)</span>
+            <span class="text-lime-400 font-mono">Executive Infographic Deck</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technical Specifications & File Manifest -->
+      <div class="space-y-1.5">
+        <div class="flex items-center justify-between border-b border-slate-200 pb-1">
+          <h2 class="text-sm font-bold text-slate-900 font-heading flex items-center gap-1.5">
+            <span>⚙️</span> 7. รายการไฟล์และการควบคุมเวอร์ชัน (Version 1.0 Manifest)
+          </h2>
+          <span class="text-[10px] text-slate-500 font-mono">Git Tag: v1.0.0</span>
+        </div>
+
+        <div class="border border-slate-200 rounded-lg overflow-hidden text-xs">
+          <table class="w-full text-left">
+            <thead class="bg-slate-100 text-slate-700 font-heading text-[10px]">
+              <tr>
+                <th class="p-1.5">ชื่อไฟล์ / ทรัพยากร</th>
+                <th class="p-1.5">ขนาด</th>
+                <th class="p-1.5">บทบาทและหน้าที่</th>
+                <th class="p-1.5">สถานะ</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-[10.5px]">
+              <tr>
+                <td class="p-1.5 font-mono font-semibold text-slate-900">index.html</td>
+                <td class="p-1.5 text-slate-500">279 KB</td>
+                <td class="p-1.5 text-slate-600">แอปพลิเคชันหลัก, แดชบอร์ด 5 เสาหลัก, Video Modal & Routing</td>
+                <td class="p-1.5 text-emerald-600 font-bold">Stable v1.0</td>
+              </tr>
+              <tr>
+                <td class="p-1.5 font-mono font-semibold text-slate-900">draft_quotation.js</td>
+                <td class="p-1.5 text-slate-500">38 KB</td>
+                <td class="p-1.5 text-slate-600">เอนจินออกใบเสนอราคา AWN Draft 2 หน้า A4 & Thai BahtText</td>
+                <td class="p-1.5 text-emerald-600 font-bold">Verified</td>
+              </tr>
+              <tr>
+                <td class="p-1.5 font-mono font-semibold text-slate-900">solution_kits.js</td>
+                <td class="p-1.5 text-slate-500">175 KB</td>
+                <td class="p-1.5 text-slate-600">ชุดเครื่องมือ Sales Enablement 12 โซลูชัน & Site References</td>
+                <td class="p-1.5 text-emerald-600 font-bold">Updated</td>
+              </tr>
+              <tr>
+                <td class="p-1.5 font-mono font-semibold text-slate-900">i18n.js</td>
+                <td class="p-1.5 text-slate-500">46 KB</td>
+                <td class="p-1.5 text-slate-600">ระบบแปลภาษา 2 ภาษา (ไทย/อังกฤษ) ครบทุกแคตตาล็อก</td>
+                <td class="p-1.5 text-emerald-600 font-bold">Bilingual</td>
+              </tr>
+              <tr>
+                <td class="p-1.5 font-mono font-semibold text-slate-900">WIFIDigitalUniversity.mp4</td>
+                <td class="p-1.5 text-slate-500">28 MB</td>
+                <td class="p-1.5 text-slate-600">วิดีโอสตอรี่เคส ม.แม่ฟ้าหลวง (Wi-Fi 6 Digital University)</td>
+                <td class="p-1.5 text-emerald-600 font-bold">HD 720p</td>
+              </tr>
+              <tr>
+                <td class="p-1.5 font-mono font-semibold text-slate-900">BusinessSrisawad-Power-1979.mp4</td>
+                <td class="p-1.5 text-slate-500">24 MB</td>
+                <td class="p-1.5 text-slate-600">วิดีโอสตอรี่เคส บมจ. ศรีสวัสดิ์ พาวเวอร์ 1979 (หลายสาขา)</td>
+                <td class="p-1.5 text-emerald-600 font-bold">HD 720p</td>
+              </tr>
+              <tr>
+                <td class="p-1.5 font-mono font-semibold text-slate-900">Business-KTIS_001_720p.mp4</td>
+                <td class="p-1.5 text-slate-500">27 MB</td>
+                <td class="p-1.5 text-slate-600">วิดีโอสตอรี่เคส กลุ่ม บมจ. เกษตรไทย อินเตอร์เนชั่นแนล (โรงงาน)</td>
+                <td class="p-1.5 text-emerald-600 font-bold">HD 720p</td>
+              </tr>
+              <tr class="bg-lime-50/50">
+                <td class="p-1.5 font-mono font-bold text-slate-900">vanguard_project_v1.0.zip</td>
+                <td class="p-1.5 text-slate-500 font-bold">114 MB</td>
+                <td class="p-1.5 text-slate-700">แพ็กเกจพกพารวมไฟล์ทั้งหมดพร้อมเปิดใช้งานออฟไลน์</td>
+                <td class="p-1.5 text-emerald-600 font-bold">Release Package</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Sign-off & Footer Box -->
+      <div class="p-2.5 rounded-lg border border-slate-200 bg-slate-50 flex items-center justify-between text-[10.5px]">
+        <div>
+          <span>จัดทำโดย: <strong>NEXUS Vanguard Sales Enablement Team</strong></span> • 
+          <span>บริษัท แอดวานซ์ ไวร์เลส เน็ทเวอร์ค จำกัด (AWN)</span>
+        </div>
+        <div class="text-right text-slate-500 font-mono">
+          Ref: AWN-VNGRD-RN-1.0 • Ready for Enterprise Deployment
+        </div>
+      </div>
+    </div>
+
+    <!-- Page Footer -->
+    <div class="pt-2 border-t border-slate-200 flex items-center justify-between text-slate-400 text-[10px]">
+      <div>AIS Vanguard Sales Hub • Version 1.0 Official Release Notes</div>
+      <div class="font-mono">Page 5 of 5</div>
+    </div>
+  </div>
+
+</body>
+</html>
