@@ -1262,16 +1262,18 @@
 
       <!-- Video Pitch Story Context & Actions -->
       <div class="p-3.5 bg-slate-800/80 rounded-xl border border-slate-700/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
-        <div class="space-y-1">
+        <div class="space-y-1.5 flex-1 pr-2">
           <div class="flex items-center gap-1.5 text-lime-400 font-semibold">
             <i data-lucide="sparkles" class="w-4 h-4"></i>
             <span>คำแนะนำสำหรับทีมขาย (Story Pitching Tip):</span>
           </div>
-          <p id="storyModalPitchTip" class="text-slate-300 leading-relaxed">
-            เปิดคลิปนี้ให้ลูกค้าที่มีหลายสาขา (Chain Stores / Retail / Finance) ชมเพื่อให้เห็นภาพว่าโครงข่าย AIS Corporate Internet มีความเสถียร 99.9% รองรับการซิงค์ข้อมูลตลอด 24 ชม.
-          </p>
+          <div id="storyModalPitchTip" class="text-slate-200 leading-relaxed space-y-1.5 pt-0.5 text-xs">
+            <p class="leading-relaxed">“สิ่งที่ AIS อยากส่งมอบไม่ใช่เพียงวงจร EDS แต่คือความมั่นใจว่า Network AIS จะพร้อมสนับสนุนทุก Solution ขององค์กรลูกค้าค่ะ”</p>
+            <p class="leading-relaxed">“วันนี้เราไม่อยากให้ตัดสินใจเพียงจากราคาที่เห็น แต่อยากให้มองถึงผลกระทบต่อธุรกิจในวันที่ Network เป็นสิ่งที่องค์กรขาดไม่ได้ค่ะ และ Network ที่เสถียร และพร้อม Service หลังการขายตลอด 24 ชม.”</p>
+            <p class="leading-relaxed">“สำหรับองค์กรของลูกค้าระดับนี้ Network ไม่ใช่แค่ระบบหลังบ้าน แต่เป็นโครงสร้างสำคัญของธุรกิจ ให้ AIS ช่วยดูแลความพร้อม เพื่อให้ธุรกิจเดินหน้าได้อย่างมั่นใจนะคะ”</p>
+          </div>
         </div>
-        <div class="flex items-center gap-2 shrink-0">
+        <div class="flex items-center gap-2 shrink-0 self-end sm:self-center">
           <a id="storyModalDownloadBtn" href="BusinessSrisawad-Power-1979.mp4" download class="px-3.5 py-2 bg-slate-700 hover:bg-slate-600 text-slate-200 font-medium rounded-xl text-xs flex items-center gap-1.5 transition">
             <i data-lucide="download" class="w-3.5 h-3.5"></i>
             <span>ดาวน์โหลดคลิป</span>
@@ -1375,7 +1377,13 @@
                 tag: 'สาขาเยอะ / รีเทล & การเงิน',
                 sub: 'เปิดประเด็นสำหรับธุรกิจที่มีหลายสาขา (Retail, Chain Store, Finance) • ความยาว 1:50 นาที',
                 desc: 'ชมวิธีที่ศรีสวัสดิ์ขยายธุรกิจและเชื่อมโยงระบบสาขาหลายพันแห่งทั่วไทยอย่างไร้รอยต่อ มั่นใจด้วยโครงข่ายระดับองค์กรและความเสถียร 99.9% จาก AIS Business พร้อมทีมวิศวกรดูแลตลอด 24 ชั่วโมง',
-                pitchTip: 'เปิดคลิปนี้ให้ลูกค้าที่มีหลายสาขา (Chain Stores / Retail / Finance) ชมเพื่อให้เห็นภาพว่าโครงข่าย AIS Corporate Internet มีความเสถียร 99.9% รองรับการซิงค์ข้อมูลตลอด 24 ชม.',
+                pitchTip: `
+                  <div class="space-y-1.5">
+                    <p class="leading-relaxed">“สิ่งที่ AIS อยากส่งมอบไม่ใช่เพียงวงจร EDS แต่คือความมั่นใจว่า Network AIS จะพร้อมสนับสนุนทุก Solution ขององค์กรลูกค้าค่ะ”</p>
+                    <p class="leading-relaxed">“วันนี้เราไม่อยากให้ตัดสินใจเพียงจากราคาที่เห็น แต่อยากให้มองถึงผลกระทบต่อธุรกิจในวันที่ Network เป็นสิ่งที่องค์กรขาดไม่ได้ค่ะ และ Network ที่เสถียร และพร้อม Service หลังการขายตลอด 24 ชม.”</p>
+                    <p class="leading-relaxed">“สำหรับองค์กรของลูกค้าระดับนี้ Network ไม่ใช่แค่ระบบหลังบ้าน แต่เป็นโครงสร้างสำคัญของธุรกิจ ให้ AIS ช่วยดูแลความพร้อม เพื่อให้ธุรกิจเดินหน้าได้อย่างมั่นใจนะคะ”</p>
+                  </div>
+                `,
                 src: 'BusinessSrisawad-Power-1979.mp4',
                 duration: '1:50 นาที',
                 industry: 'retail'
@@ -1389,7 +1397,13 @@
                 tag: 'โรงงาน & นิคมฯ / Factory & Agro',
                 sub: 'เปิดประเด็นสร้างความมั่นใจสำหรับโรงงาน อุตสาหกรรม และพื้นที่ห่างไกล • ความยาว 2:01 นาที',
                 desc: 'ชมวิธีที่กลุ่ม KTIS ผู้นำอุตสาหกรรมน้ำตาลและพลังงานชีวภาพของไทย ไว้วางใจเลือกใช้โครงข่าย AIS Corporate Internet (EDS) เชื่อมโยงสำนักงานใหญ่ โรงงาน และพื้นที่เกษตรกรรม มั่นใจในสัญญาณครอบคลุมและทีมงานดูแลรวดเร็ว',
-                pitchTip: 'เปิดคลิปนี้ให้ลูกค้ากลุ่มโรงงาน อุตสาหกรรม หรือธุรกิจที่มีพื้นที่กว้างขวาง/ไซต์งานต่างจังหวัด ชมเพื่อให้เห็นศักยภาพโครงข่ายสัญญาณและ Fiber EDS ของ AIS Business ที่ครอบคลุมแม้ในพื้นที่ห่างไกล พร้อมการันตี SLA ซ่อมด่วนใน 4 ชั่วโมง',
+                pitchTip: `
+                  <div class="space-y-1.5">
+                    <p class="leading-relaxed">“สิ่งที่ AIS อยากส่งมอบไม่ใช่เพียงวงจร EDS แต่คือความมั่นใจว่า Network AIS จะพร้อมสนับสนุนทุก Solution ขององค์กรลูกค้าค่ะ”</p>
+                    <p class="leading-relaxed">“วันนี้เราไม่อยากให้ตัดสินใจเพียงจากราคาที่เห็น แต่อยากให้มองถึงผลกระทบต่อธุรกิจในวันที่ Network เป็นสิ่งที่องค์กรขาดไม่ได้ค่ะ และ Network ที่เสถียร และพร้อม Service หลังการขายตลอด 24 ชม.”</p>
+                    <p class="leading-relaxed">“สำหรับองค์กรของลูกค้าระดับนี้ Network ไม่ใช่แค่ระบบหลังบ้าน แต่เป็นโครงสร้างสำคัญของธุรกิจ ให้ AIS ช่วยดูแลความพร้อม เพื่อให้ธุรกิจเดินหน้าได้อย่างมั่นใจนะคะ”</p>
+                  </div>
+                `,
                 src: 'Business-KTIS_001_720p.mp4',
                 duration: '2:01 นาที',
                 industry: 'factory'
@@ -3414,7 +3428,7 @@
       if (titleEl) titleEl.innerText = vidData.modalTitle || vidData.title;
       if (badgeEl) badgeEl.innerText = vidData.badge || 'AIS Business Customer Story';
       if (subEl) subEl.innerText = vidData.desc || vidData.sub;
-      if (tipEl) tipEl.innerText = vidData.pitchTip || '';
+      if (tipEl) tipEl.innerHTML = vidData.pitchTip || '';
       if (dlBtn) dlBtn.href = vidData.src;
 
       if (player) {

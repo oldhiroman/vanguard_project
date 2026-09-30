@@ -280,7 +280,13 @@ const PILLARS_EN = [
             tag: 'Multi-Branch / Finance & Retail',
             sub: 'Open pitch to build confidence for multi-branch retail & finance businesses (1:50 mins)',
             desc: 'Discover how Srisawad connected thousands of branches across Thailand with zero downtime, powered by AIS Business Enterprise connectivity and 24x7 SLA support.',
-            pitchTip: 'Show this clip to multi-branch clients (Chain Stores / Retail / Finance) to highlight 99.9% uptime and 24/7 data sync across all branches.',
+            pitchTip: `
+              <div class="space-y-1.5">
+                <p class="leading-relaxed">“What AIS aims to deliver is not just an EDS circuit, but the confidence that AIS Network will empower and support every business solution of your enterprise.”</p>
+                <p class="leading-relaxed">“We hope you look beyond the upfront price and consider the real business impact when network connectivity becomes a mission-critical lifeline, backed by reliable performance and 24/7 post-sales service.”</p>
+                <p class="leading-relaxed">“For an enterprise of your stature, network connectivity is no longer just a back-office tool, but a strategic cornerstone of your business. Let AIS safeguard your operational readiness so your business can move forward with complete peace of mind.”</p>
+              </div>
+            `,
             src: 'BusinessSrisawad-Power-1979.mp4',
             duration: '1:50 mins',
             industry: 'retail'
@@ -294,7 +300,13 @@ const PILLARS_EN = [
             tag: 'Factory & Industrial Sites',
             sub: 'Open pitch to build confidence for manufacturing plants and provincial sites (2:01 mins)',
             desc: 'See how KTIS Group, Thailand’s leading sugar & bio-energy producer, trusts AIS Corporate Internet (EDS) to connect headquarters, factories, and remote plantations nationwide.',
-            pitchTip: 'Show this clip to manufacturing, industrial, or provincial site clients to demonstrate AIS Business’s high-speed fiber reach and guaranteed 4-hour MTTR repair SLA in remote areas.',
+            pitchTip: `
+              <div class="space-y-1.5">
+                <p class="leading-relaxed">“What AIS aims to deliver is not just an EDS circuit, but the confidence that AIS Network will empower and support every business solution of your enterprise.”</p>
+                <p class="leading-relaxed">“We hope you look beyond the upfront price and consider the real business impact when network connectivity becomes a mission-critical lifeline, backed by reliable performance and 24/7 post-sales service.”</p>
+                <p class="leading-relaxed">“For an enterprise of your stature, network connectivity is no longer just a back-office tool, but a strategic cornerstone of your business. Let AIS safeguard your operational readiness so your business can move forward with complete peace of mind.”</p>
+              </div>
+            `,
             src: 'Business-KTIS_001_720p.mp4',
             duration: '2:01 mins',
             industry: 'factory'
