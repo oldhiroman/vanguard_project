@@ -237,12 +237,38 @@ const PILLARS_EN = [
           'Zero capital expense for expensive hardware controllers or specialized onsite IT'
         ],
         caseStudies: {
-          office: 'Top consulting firm (4 floors, 120 staff): Deployed 12 APs, zero jitter during all-day Microsoft Teams calls.',
+          office: 'Mae Fah Luang University (MFU): Deployed campus-wide Wi-Fi 6 infrastructure supporting tens of thousands of concurrent students & faculty.',
           factory: 'Food manufacturing plant in Chonburi: Industrial-grade APs deployed across production lines for real-time ERP barcode scanning.',
           hotel: '60-room Boutique Hotel: Guest satisfaction increased by 40% after implementing automated Voucher Portal.',
           retail: '15-store Fashion Retail Chain: Linked POS terminals and offered member Wi-Fi for loyalty rewards.',
           logistics: 'Lat Krabang Warehouse: 8,000 sq.m. coverage ensuring continuous handheld barcode scanner connectivity.'
-        }
+        },
+        storyVideos: [
+          {
+            id: 'mfu-wifi',
+            title: 'Mae Fah Luang University (MFU)',
+            modalTitle: 'Real Customer Case: Mae Fah Luang University (MFU Digital University)',
+            badge: 'Digital University & Wi-Fi 6',
+            icon: 'wifi',
+            tag: 'Higher Ed & Enterprise Campus Wi-Fi 6',
+            sub: 'Upgrading Wi-Fi 6 infrastructure to build a world-class Digital University (3:25 mins)',
+            desc: 'Discover how Mae Fah Luang University trusted AIS Business to deploy enterprise-grade Wi-Fi 6 across campus grounds, supporting tens of thousands of concurrent smart devices via centralized Cloud Controller management.',
+            pitchTip: `
+              <div class="space-y-1.5">
+                <p class="leading-relaxed">“Corporate WiFi from AIS is not just about mounting access points; it is about building a true digital foundation that handles high-density concurrency reliably without slowdowns.”</p>
+                <p class="leading-relaxed">“Managed through a Centralized Cloud Dashboard, it provides granular security policies and seamless guest/staff traffic segregation without needing dedicated onsite IT engineers.”</p>
+                <p class="leading-relaxed">“Whether it is a university campus, hospital, hotel, or corporate headquarters, AIS designs, deploys, and monitors enterprise networks 24/7 with carrier-grade SLAs.”</p>
+              </div>
+            `,
+            src: 'WIFIDigitalUniversity.mp4',
+            duration: '3:25 mins',
+            industry: 'office'
+          }
+        ],
+        storyVideoTitle: 'Real Customer Case: Mae Fah Luang University (MFU Digital University)',
+        storyVideoBadge: 'Digital University & Wi-Fi 6',
+        storyVideoSub: 'Click to open pop-up video story showcasing campus-wide Wi-Fi 6 deployment (Duration 3:25 mins)',
+        storyVideoDesc: 'See how Mae Fah Luang University upgraded to enterprise Wi-Fi 6 powered by AIS Business, supporting thousands of simultaneous devices with cloud management.'
       },
       'biz-fibre': {
         name: 'Corporate Internet (EDS)',

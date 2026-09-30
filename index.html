@@ -1437,12 +1437,39 @@
               'ไม่ต้องเสียเงินจ้าง IT หรือซื้อ Hardware Controller ราคาแพง'
             ],
             caseStudies: {
-              office: 'บริษัท คอนซัลติ้ง ชั้นนำ (อาคาร 4 ชั้น, พนักงาน 120 คน) ติดตั้ง 12 จุด รองรับการประชุม Microsoft Teams ไม่กระตุกตลอดวัน',
+              office: 'มหาวิทยาลัยแม่ฟ้าหลวง (MFU): อัปเกรดระบบเครือข่าย Wi-Fi 6 ครอบคลุมทั่วมหาวิทยาลัย รองรับนิสิตและคณาจารย์พร้อมกันนับหมื่นจุด',
               factory: 'โรงงานผลิตอาหารแปรรูป ชลบุรี ใช้อุปกรณ์เกรดอุตสาหกรรมในไลน์ผลิตและคลังสินค้า จัดการสต็อกแบบ Real-time',
               hotel: 'โรงแรมบูทีค 60 ห้อง อัตราความพึงพอใจลูกค้าเพิ่มขึ้น 40% หลังได้ระบบ Login แบบ Voucher สวยงาม',
               retail: 'ร้านค้าปลีกแฟชั่น 15 สาขา เชื่อมต่อ POS และให้ลูกค้าต่อ WiFi ฟรีเพื่อรับสิทธิพิเศษสมาชิก',
               logistics: 'คลังสินค้าลาดกระบัง ติดตั้ง AP ครอบคลุมพื้นที่ 8,000 ตร.ม. รองรับ Handheld Scanner สแกนบาร์โค้ดไม่หลุด'
-            }
+            },
+            storyVideos: [
+              {
+                id: 'mfu-wifi',
+                title: 'มหาวิทยาลัยแม่ฟ้าหลวง (MFU)',
+                modalTitle: 'กรณีศึกษาจริง: มหาวิทยาลัยแม่ฟ้าหลวง (MFU Digital University)',
+                badge: 'Digital University & Wi-Fi 6',
+                icon: 'wifi',
+                tag: 'การศึกษา & แคมปัส / Campus Wi-Fi 6',
+                sub: 'อัปเกรดระบบ Wi-Fi 6 วางรากฐานสู่ Digital University รองรับการใช้งานหนาแน่น • ความยาว 3:25 นาที',
+                desc: 'ชมวิธีที่มหาวิทยาลัยแม่ฟ้าหลวง ไว้วางใจ AIS Business ในการยกระดับโครงสร้างพื้นฐานเครือข่ายไร้สาย Wi-Fi 6 ทั่วทั้งมหาวิทยาลัย รองรับการเชื่อมต่อพร้อมกันนับหมื่นเครื่อง จัดการผ่านระบบ Cloud Controller แบบรวมศูนย์',
+                pitchTip: `
+                  <div class="space-y-1.5">
+                    <p class="leading-relaxed">“Corporate WiFi จาก AIS ไม่ใช่แค่การติดเราเตอร์ แต่คือการวางรากฐาน Digital Infrastructure ที่รองรับผู้ใช้งานพร้อมกันหนาแน่น (High Density Concurrency) ได้อย่างแท้จริงค่ะ”</p>
+                    <p class="leading-relaxed">“จัดการผ่าน Cloud Centralized Dashboard ควบคุมนโยบายความปลอดภัยและแยกท่อผู้ใช้งานได้ง่าย ไม่จำเป็นต้องมีผู้เชี่ยวชาญด้าน IT ประจำทุกจุด”</p>
+                    <p class="leading-relaxed">“ไม่ว่าจะเป็นสถานศึกษา โรงแรม โรงพยาบาล หรือสำนักงานใหญ่ AIS พร้อมออกแบบและติดตั้งด้วยมาตรฐานระดับองค์กร พร้อมทีมดูแลตลอด 24 ชั่วโมงค่ะ”</p>
+                  </div>
+                `,
+                src: 'WIFIDigitalUniversity.mp4',
+                duration: '3:25 นาที',
+                industry: 'office'
+              }
+            ],
+            storyVideo: 'WIFIDigitalUniversity.mp4',
+            storyVideoTitle: 'วิดีโอสตอรี่เคสลูกค้าจริง: มหาวิทยาลัยแม่ฟ้าหลวง (MFU)',
+            storyVideoBadge: 'Digital University & Wi-Fi 6',
+            storyVideoSub: 'คลิกเพื่อเปิดป๊อปอัปวิดีโอสตอรี่สำหรับเปิดประเด็นสร้างความมั่นใจระบบ WiFi องค์กร (ความยาว 3:25 นาที)',
+            storyVideoDesc: 'ชมวิธีที่มหาวิทยาลัยแม่ฟ้าหลวง อัปเกรดระบบเครือข่ายไร้สาย Wi-Fi 6 วางรากฐานสู่ Digital University รองรับการใช้งานอุปกรณ์พร้อมกันนับหมื่นจุด มั่นใจด้วย AIS Business'
           },
           {
             id: 'sd-wan', sharepointUrl: 'https://mimotech.sharepoint.com/sites/Bizinfopedia/SitePages/SD-WAN.aspx',
@@ -1666,11 +1693,31 @@
     let currentStoryVideoIndex = 0;
 
     // INITIALIZATION
+    function handleHashRouting() {
+      const hash = window.location.hash.replace('#', '').trim();
+      if (!hash) return false;
+      for (const p of PILLARS) {
+        const s = p.solutions.find(x => x.id === hash);
+        if (s) {
+          selectPillar(p.id);
+          selectSolution(s.id);
+          return true;
+        }
+      }
+      return false;
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
       initTheme();
       renderPillars();
-      selectPillar(currentPillarId);
+      if (!handleHashRouting()) {
+        selectPillar(currentPillarId);
+      }
       lucide.createIcons();
+    });
+
+    window.addEventListener('hashchange', () => {
+      handleHashRouting();
     });
 
     // RENDER 5 PILLARS
@@ -1767,6 +1814,11 @@
     // SELECT SOLUTION
     function selectSolution(solId) {
       currentSolutionId = solId;
+      try {
+        if (window.location.hash !== '#' + solId) {
+          history.replaceState(null, null, '#' + solId);
+        }
+      } catch (e) {}
       const pillar = PILLARS.find(p => p.id === currentPillarId);
       const rawSol = pillar?.solutions.find(s => s.id === solId);
       if (!rawSol) return;
