@@ -28,7 +28,9 @@ const I18N = {
 
     // Industry Filter Bar
     industryFilterLabel: 'เลือกตามกลุ่มธุรกิจลูกค้า (Smart Vertical Solutions):',
-    ind_all: 'ทั้งหมด (All)',
+    industryFilterSub: 'กรองบริบทสตอรี่ Use Case และเคสลูกค้าจริงให้ตรงกับอุตสาหกรรมของลูกค้า',
+    verticalCaseStudyTitle: 'กรณีศึกษาเฉพาะกลุ่มธุรกิจ:',
+    ind_all: '🌐 ทั้งหมด (All Industries)',
     ind_office: '🏢 สำนักงาน (Modern Office)',
     ind_factory: '🏭 โรงงานอัจฉริยะ (Smart Factory / 5G)',
     ind_hotel: '🏨 โรงแรมและการบริการ (Hotel WiFi & Hospitality)',
@@ -131,7 +133,9 @@ const I18N = {
 
     // Industry Filter Bar
     industryFilterLabel: 'Filter by Client Industry (Smart Verticals):',
-    ind_all: 'All Industries',
+    industryFilterSub: 'Filter story hooks, use cases, and client proofs matching client industry',
+    verticalCaseStudyTitle: 'Vertical Use Case:',
+    ind_all: '🌐 All Industries',
     ind_office: '🏢 Modern Office',
     ind_factory: '🏭 Smart Factory / 5G',
     ind_hotel: '🏨 Hotels & Hospitality',
@@ -633,9 +637,11 @@ function updateLanguageUI() {
   const elPillarsHint = document.getElementById('pillarsSectionHint');
   if (elPillarsHint) elPillarsHint.innerText = t.pillarsHint;
 
-  // Industry Filters
+  // Industry Filters (Dropdown & Labels)
   const elIndLabel = document.getElementById('industryFilterLabel');
   if (elIndLabel) elIndLabel.innerText = t.industryFilterLabel;
+  const elIndSub = document.getElementById('industryFilterSub');
+  if (elIndSub) elIndSub.innerText = t.industryFilterSub;
   const indMap = {
     all: t.ind_all,
     office: t.ind_office,
@@ -644,6 +650,13 @@ function updateLanguageUI() {
     retail: t.ind_retail,
     logistics: t.ind_logistics
   };
+  const indSelect = document.getElementById('industrySelect');
+  if (indSelect) {
+    Array.from(indSelect.options).forEach(opt => {
+      const ind = opt.getAttribute('data-ind') || opt.value;
+      if (ind && indMap[ind]) opt.innerText = indMap[ind];
+    });
+  }
   document.querySelectorAll('.industry-btn').forEach(btn => {
     const ind = btn.getAttribute('data-ind');
     if (ind && indMap[ind]) btn.innerText = indMap[ind];

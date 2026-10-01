@@ -309,31 +309,39 @@
       </div>
     </section>
 
-    <!-- INDUSTRY & VERTICAL FILTER BAR -->
-    <div class="bg-white rounded-xl border border-slate-200 p-3 shadow-xs flex flex-wrap items-center justify-between gap-3">
-      <div class="flex items-center gap-2 text-xs font-semibold text-slate-700">
-        <i data-lucide="briefcase" class="w-4 h-4 text-slate-500"></i>
-        <span id="industryFilterLabel">เลือกตามกลุ่มธุรกิจลูกค้า (Smart Vertical Solutions):</span>
+    <!-- INDUSTRY & VERTICAL FILTER BAR (SMART VERTICAL SOLUTIONS DROPDOWN) -->
+    <div class="bg-white dark:bg-slate-850 rounded-2xl border border-slate-200 dark:border-slate-800 p-3 sm:p-3.5 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-3.5 transition">
+      <div class="flex items-center gap-3 text-xs text-slate-700 dark:text-slate-200">
+        <span class="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 text-ais-darkgreen dark:text-lime-400 flex items-center justify-center shrink-0 border border-emerald-500/30 shadow-2xs">
+          <i data-lucide="briefcase" class="w-4 h-4"></i>
+        </span>
+        <div>
+          <label for="industrySelect" id="industryFilterLabel" class="font-bold text-slate-900 dark:text-white cursor-pointer block text-xs sm:text-sm">
+            เลือกตามกลุ่มธุรกิจลูกค้า (Smart Vertical Solutions):
+          </label>
+          <span id="industryFilterSub" class="text-[11px] text-slate-500 dark:text-slate-400 block mt-0.5">
+            กรองบริบทสตอรี่ Use Case และเคสลูกค้าจริงให้ตรงกับอุตสาหกรรมของลูกค้า
+          </span>
+        </div>
       </div>
-      <div class="flex flex-wrap items-center gap-1.5" id="industryFilterGroup">
-        <button onclick="setIndustry('all')" class="industry-btn px-3 py-1 text-xs rounded-lg font-medium border bg-slate-900 text-white border-slate-900 transition" data-ind="all">
-          ทั้งหมด (All)
-        </button>
-        <button onclick="setIndustry('office')" class="industry-btn px-3 py-1 text-xs rounded-lg font-medium border bg-white text-slate-700 hover:bg-slate-50 border-slate-200 transition" data-ind="office">
-          🏢 สำนักงาน (Modern Office)
-        </button>
-        <button onclick="setIndustry('factory')" class="industry-btn px-3 py-1 text-xs rounded-lg font-medium border bg-white text-slate-700 hover:bg-slate-50 border-slate-200 transition" data-ind="factory">
-          🏭 โรงงานอัจฉริยะ (Smart Factory / 5G)
-        </button>
-        <button onclick="setIndustry('hotel')" class="industry-btn px-3 py-1 text-xs rounded-lg font-medium border bg-white text-slate-700 hover:bg-slate-50 border-slate-200 transition" data-ind="hotel">
-          🏨 โรงแรมและการบริการ (Hotel WiFi & Hospitality)
-        </button>
-        <button onclick="setIndustry('retail')" class="industry-btn px-3 py-1 text-xs rounded-lg font-medium border bg-white text-slate-700 hover:bg-slate-50 border-slate-200 transition" data-ind="retail">
-          🛍️ ร้านค้าปลีก (Smart Retail & AI-Vision)
-        </button>
-        <button onclick="setIndustry('logistics')" class="industry-btn px-3 py-1 text-xs rounded-lg font-medium border bg-white text-slate-700 hover:bg-slate-50 border-slate-200 transition" data-ind="logistics">
-          🚚 ขนส่ง & คลังสินค้า (Smart Logistics / TMS)
-        </button>
+      <div class="relative w-full md:w-auto md:min-w-[360px] lg:min-w-[400px]">
+        <div class="relative">
+          <select id="industrySelect" onchange="setIndustry(this.value)" 
+            class="w-full text-xs font-semibold pl-9 pr-10 py-2.5 bg-slate-50 dark:bg-slate-900 hover:bg-white dark:hover:bg-slate-800/90 border-2 border-slate-200 dark:border-slate-700 hover:border-ais-green dark:hover:border-lime-500 focus:border-ais-green dark:focus:border-lime-500 text-slate-900 dark:text-slate-100 rounded-xl outline-none shadow-xs appearance-none cursor-pointer transition">
+            <option value="all" data-ind="all">🌐 ทั้งหมด (All Industries)</option>
+            <option value="office" data-ind="office">🏢 สำนักงาน (Modern Office)</option>
+            <option value="factory" data-ind="factory">🏭 โรงงานอัจฉริยะ (Smart Factory / 5G)</option>
+            <option value="hotel" data-ind="hotel">🏨 โรงแรมและการบริการ (Hotel WiFi & Hospitality)</option>
+            <option value="retail" data-ind="retail">🛍️ ร้านค้าปลีก (Smart Retail & AI-Vision)</option>
+            <option value="logistics" data-ind="logistics">🚚 ขนส่ง & คลังสินค้า (Smart Logistics / TMS)</option>
+          </select>
+          <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-emerald-600 dark:text-lime-400">
+            <i data-lucide="filter" class="w-3.5 h-3.5"></i>
+          </div>
+          <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-slate-400 dark:text-slate-500">
+            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -444,6 +452,22 @@
               <p id="detailValueImpact" class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                 การประชุมราบรื่น 100%, ภาพลักษณ์องค์กรดูมืออาชีพด้วยระบบ Login หน้ากัก, ประหยัดงบ IT Support สูงสุด 50%
               </p>
+            </div>
+          </div>
+
+          <!-- DYNAMIC VERTICAL USE CASE BOX (Visible when industry selected) -->
+          <div id="verticalCaseStudyBox" class="hidden mt-3 p-3.5 bg-gradient-to-r from-emerald-50/90 via-teal-50/70 to-lime-50/60 dark:from-slate-800/95 dark:to-slate-850 rounded-xl border border-emerald-200/90 dark:border-emerald-800/60 shadow-2xs transition">
+            <div class="flex items-start gap-2.5">
+              <span class="w-6 h-6 rounded-lg bg-emerald-600 dark:bg-emerald-500 text-white flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                <i data-lucide="building-2" class="w-3.5 h-3.5 text-lime-300"></i>
+              </span>
+              <div class="min-w-0 flex-1">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span id="verticalCaseStudyTitle" class="font-bold text-xs text-emerald-950 dark:text-emerald-300">กรณีศึกษาเฉพาะกลุ่มธุรกิจ:</span>
+                  <span id="verticalCaseStudyBadge" class="text-[10px] bg-emerald-200/80 dark:bg-emerald-950 text-emerald-900 dark:text-emerald-300 font-semibold px-2 py-0.5 rounded-full border border-emerald-300 dark:border-emerald-800"></span>
+                </div>
+                <p id="verticalCaseStudyText" class="text-xs text-slate-700 dark:text-slate-300 mt-1 leading-relaxed font-medium"></p>
+              </div>
             </div>
           </div>
 
@@ -1720,6 +1744,10 @@
       if (!handleHashRouting()) {
         selectPillar(currentPillarId);
       }
+      const urlIndustry = new URLSearchParams(window.location.search).get('industry');
+      if (urlIndustry && ['office', 'factory', 'hotel', 'retail', 'logistics', 'all'].includes(urlIndustry)) {
+        setIndustry(urlIndustry);
+      }
       lucide.createIcons();
     });
 
@@ -1795,23 +1823,33 @@
     // RENDER SOLUTION LIST
     function renderSolutionsList(pillar) {
       const container = document.getElementById('solutionListContainer');
+      const isEn = typeof currentLanguage !== 'undefined' && currentLanguage === 'en';
       container.innerHTML = pillar.solutions.map(rawSol => {
         const sol = typeof getLocalizedSolution === 'function' ? getLocalizedSolution(rawSol) : rawSol;
         const isActive = sol.id === currentSolutionId;
+        const hasMatchingCase = (currentIndustry !== 'all' && rawSol.caseStudies && rawSol.caseStudies[currentIndustry]);
         return `
           <div onclick="selectSolution('${sol.id}')" 
             class="p-3 rounded-xl border transition cursor-pointer flex items-center justify-between
-              ${isActive ? 'bg-lime-50/80 border-ais-green shadow-xs' : 'bg-white border-transparent hover:bg-slate-50 hover:border-slate-200'}">
-            <div class="space-y-0.5">
-              <div class="flex items-center gap-1.5">
-                <span class="font-bold text-xs ${isActive ? 'text-ais-darkgreen' : 'text-slate-900'}">${sol.name}</span>
+              ${isActive 
+                ? 'bg-lime-50/80 dark:bg-lime-950/40 border-ais-green dark:border-lime-500 shadow-xs' 
+                : 'bg-white dark:bg-slate-800/80 border-transparent hover:bg-slate-50 dark:hover:bg-slate-750 hover:border-slate-200 dark:hover:border-slate-700'}">
+            <div class="space-y-0.5 min-w-0 flex-1 pr-2">
+              <div class="flex items-center gap-1.5 flex-wrap">
+                <span class="font-bold text-xs ${isActive ? 'text-ais-darkgreen dark:text-lime-400' : 'text-slate-900 dark:text-white'}">${sol.name}</span>
+                ${hasMatchingCase ? `
+                  <span class="text-[9px] bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 font-semibold px-1.5 py-0.5 rounded border border-emerald-200 dark:border-emerald-800 flex items-center gap-0.5">
+                    <i data-lucide="check-circle" class="w-2.5 h-2.5 text-emerald-600 dark:text-emerald-400"></i>
+                    <span>${isEn ? 'Matches' : 'ตรงกลุ่ม'}</span>
+                  </span>
+                ` : ''}
               </div>
-              <div class="flex items-center gap-1.5 text-[10px]">
-                <span class="font-medium text-slate-500 bg-slate-100 px-1.5 py-0.2 rounded">${sol.tag}</span>
-                <span class="text-slate-400 font-mono">${sol.code}</span>
+              <div class="flex items-center gap-1.5 text-[10px] flex-wrap">
+                <span class="font-medium text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-700/60 px-1.5 py-0.5 rounded">${sol.tag}</span>
+                <span class="text-slate-400 dark:text-slate-500 font-mono">${sol.code}</span>
               </div>
             </div>
-            <i data-lucide="${isActive ? 'check' : 'chevron-right'}" class="w-4 h-4 ${isActive ? 'text-ais-darkgreen' : 'text-slate-300'}"></i>
+            <i data-lucide="${isActive ? 'check' : 'chevron-right'}" class="w-4 h-4 shrink-0 ${isActive ? 'text-ais-darkgreen dark:text-lime-400' : 'text-slate-300 dark:text-slate-600'}"></i>
           </div>
         `;
       }).join('');
@@ -1931,6 +1969,27 @@
         }
       }
 
+      // Dynamic Vertical Case Study Banner
+      const vertBox = document.getElementById('verticalCaseStudyBox');
+      const vertBadge = document.getElementById('verticalCaseStudyBadge');
+      const vertText = document.getElementById('verticalCaseStudyText');
+      if (vertBox && vertBadge && vertText) {
+        if (currentIndustry !== 'all' && sol.caseStudies && sol.caseStudies[currentIndustry]) {
+          const indNames = {
+            office: isEn ? '🏢 Modern Office' : '🏢 สำนักงาน (Modern Office)',
+            factory: isEn ? '🏭 Smart Factory / 5G' : '🏭 โรงงานอัจฉริยะ (Smart Factory / 5G)',
+            hotel: isEn ? '🏨 Hotel & Hospitality' : '🏨 โรงแรมและการบริการ (Hotel & Hospitality)',
+            retail: isEn ? '🛍️ Smart Retail' : '🛍️ ร้านค้าปลีก (Smart Retail & AI-Vision)',
+            logistics: isEn ? '🚚 Logistics & Warehouse' : '🚚 ขนส่ง & คลังสินค้า (Smart Logistics / TMS)'
+          };
+          vertBadge.innerText = indNames[currentIndustry] || currentIndustry;
+          vertText.innerText = sol.caseStudies[currentIndustry];
+          vertBox.classList.remove('hidden');
+        } else {
+          vertBox.classList.add('hidden');
+        }
+      }
+
       // Storytelling Video handling (Pop-up Video Trigger & Modal Setup)
       const storyVidSec = document.getElementById('storytellingVideoSection');
       const storyCardsContainer = document.getElementById('storytellingCardsContainer');
@@ -1939,7 +1998,16 @@
 
       // Populate currentStoryVideos
       if (sol.storyVideos && sol.storyVideos.length > 0) {
-        currentStoryVideos = sol.storyVideos;
+        if (currentIndustry !== 'all') {
+          // Sort matching industry video to front
+          currentStoryVideos = [...sol.storyVideos].sort((a, b) => {
+            const aMatch = (a.industry === currentIndustry) ? -1 : 1;
+            const bMatch = (b.industry === currentIndustry) ? -1 : 1;
+            return aMatch - bMatch;
+          });
+        } else {
+          currentStoryVideos = sol.storyVideos;
+        }
       } else if (sol.storyVideo) {
         currentStoryVideos = [{
           id: 'default',
@@ -1958,7 +2026,7 @@
         currentStoryVideos = [];
       }
 
-      const isEnSol = (typeof currentLang !== 'undefined' && currentLang === 'en');
+      const isEnSol = (typeof currentLanguage !== 'undefined' && currentLanguage === 'en');
 
       if (currentStoryVideos.length > 0) {
         if (storyVidSec) storyVidSec.classList.remove('hidden');
@@ -1980,8 +2048,9 @@
 
           storyCardsContainer.innerHTML = currentStoryVideos.map((v, idx) => {
             const iconName = v.icon || (idx === 0 ? 'building-2' : 'factory');
+            const isMatchInd = (currentIndustry !== 'all' && v.industry === currentIndustry);
             return `
-              <div onclick="openStorytellingVideoModal(${idx})" class="group bg-white dark:bg-slate-800/90 hover:bg-lime-50/60 dark:hover:bg-slate-750 p-3 sm:p-3.5 rounded-xl border border-lime-200/80 dark:border-slate-700 hover:border-ais-green dark:hover:border-lime-500 shadow-xs hover:shadow-md transition cursor-pointer flex flex-col justify-between gap-3">
+              <div onclick="openStorytellingVideoModal(${idx})" class="group bg-white dark:bg-slate-800/90 hover:bg-lime-50/60 dark:hover:bg-slate-750 p-3 sm:p-3.5 rounded-xl border ${isMatchInd ? 'border-2 border-emerald-500 shadow-md ring-2 ring-emerald-500/20' : 'border border-lime-200/80 dark:border-slate-700 hover:border-ais-green dark:hover:border-lime-500 shadow-xs hover:shadow-md'} transition cursor-pointer flex flex-col justify-between gap-3">
                 <div class="flex items-start gap-3">
                   <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-700 text-white flex items-center justify-center shrink-0 shadow-md shadow-emerald-600/20 group-hover:scale-105 transition mt-0.5">
                     <i data-lucide="${iconName}" class="w-5 h-5 text-lime-300"></i>
@@ -1991,6 +2060,12 @@
                       <span class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white group-hover:text-ais-darkgreen dark:group-hover:text-lime-400 transition">
                         ${v.title}
                       </span>
+                      ${isMatchInd ? `
+                        <span class="text-[9px] bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 font-bold px-1.5 py-0.5 rounded-full border border-emerald-300 dark:border-emerald-700 flex items-center gap-0.5">
+                          <i data-lucide="check" class="w-2.5 h-2.5"></i>
+                          <span>${isEnSol ? 'Matches Industry' : 'ตรงกลุ่มที่เลือก'}</span>
+                        </span>
+                      ` : ''}
                     </div>
                     <div class="flex items-center gap-1.5 mt-1 flex-wrap">
                       <span class="text-[10px] bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 font-semibold px-2 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800">
@@ -2031,9 +2106,13 @@
       lucide.createIcons();
     }
 
-    // INDUSTRY FILTER
+    // INDUSTRY FILTER (DROPDOWN)
     function setIndustry(ind) {
       currentIndustry = ind;
+      const select = document.getElementById('industrySelect');
+      if (select && select.value !== ind) {
+        select.value = ind;
+      }
       document.querySelectorAll('.industry-btn').forEach(btn => {
         if (btn.getAttribute('data-ind') === ind) {
           btn.className = 'industry-btn px-3 py-1 text-xs rounded-lg font-medium border bg-slate-900 text-white border-slate-900 transition';
@@ -2042,15 +2121,27 @@
         }
       });
 
+      const isEn = typeof currentLanguage !== 'undefined' && currentLanguage === 'en';
       const indNames = {
-        all: 'ทั้งหมด',
-        office: 'สำนักงาน (Modern Office)',
-        factory: 'โรงงานอัจฉริยะ (Smart Factory / 5G)',
-        hotel: 'โรงแรมและการบริการ (Hospitality)',
-        retail: 'ร้านค้าปลีก (Smart Retail)',
-        logistics: 'ขนส่ง & คลังสินค้า (Logistics)'
+        all: isEn ? 'All Industries' : 'ทั้งหมด (All)',
+        office: isEn ? 'Modern Office' : 'สำนักงาน (Modern Office)',
+        factory: isEn ? 'Smart Factory / 5G' : 'โรงงานอัจฉริยะ (Smart Factory / 5G)',
+        hotel: isEn ? 'Hotels & Hospitality' : 'โรงแรมและการบริการ (Hotel & Hospitality)',
+        retail: isEn ? 'Smart Retail' : 'ร้านค้าปลีก (Smart Retail)',
+        logistics: isEn ? 'Logistics & Warehouse' : 'ขนส่ง & คลังสินค้า (Smart Logistics)'
       };
-      showToast(`กรองบริบท Story สำหรับ: ${indNames[ind]}`);
+
+      const pillar = PILLARS.find(p => p.id === currentPillarId);
+      if (pillar) {
+        renderSolutionsList(pillar);
+        const rawSol = pillar.solutions.find(s => s.id === currentSolutionId);
+        if (rawSol) {
+          selectSolution(rawSol.id);
+        }
+      }
+
+      showToast(isEn ? `Filtered context: ${indNames[ind]}` : `กรองบริบท Story สำหรับ: ${indNames[ind]}`);
+      lucide.createIcons();
     }
 
     // PITCHBOT INTERACTION
