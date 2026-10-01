@@ -99,6 +99,24 @@ const I18N = {
     edsBtnCopyQuote: 'คัดลอกข้อความสรุปใบเสนอราคา',
     edsBtnForwardPresales: 'ส่งข้อมูลเข้าฟอร์ม Presales ทันที',
 
+    // Workflow Section
+    wfTitle: 'WORKFLOW สนับสนุนงานขายครบวงจร (Sales Lifecycle Workflow)',
+    wfSubtitle: 'เชื่อมโยงระบบขอ Presales, ระบบสร้าง Sales Kit และการติดตามสถานะการเปิดอ่านของลูกค้า',
+    wfRoleBadge: 'Role-Based Access Control',
+    wfExpandAll: 'ดูคำอธิบายทั้งหมด',
+    wfCollapseAll: 'ย่อทั้งหมด',
+    wfReadMore: 'อ่านเพิ่มเติม (Read more)...',
+    wfShowLess: 'ย่อลง (Show less)',
+    wfStep1Title: 'ขอ Presales Support',
+    wfStep1Desc: 'Sales ส่งคำขอพร้อมรายละเอียดลูกค้า ระบบแจ้งเตือนทีม Presales อัตโนมัติและติดตามสถานะได้เรียลไทม์',
+    wfStep2Title: 'ขออนุมัติส่งข้อมูลให้ลูกค้า',
+    wfStep2Desc: 'เลือกชุดข้อมูลที่ต้องการส่ง Product Owner ตรวจสอบความถูกต้อง ระบบสร้าง Custom Link ให้ส่งลูกค้าทันที',
+    wfStep3Title: 'Content Review & Expiry',
+    wfStep3Desc: 'ระบบเตือนเมื่อข้อมูลหรือราคาหมดอายุ Owner อัปเดตเวอร์ชันใหม่ มั่นใจได้ว่าข้อมูลที่ Sales ใช้สดใหม่อยู่เสมอ',
+    wfStep4Title: 'Sales Kit สำหรับลูกค้า',
+    wfStep4Desc: 'รวบรวมเนื้อหาที่เลือก สร้างเป็นหน้า Landing Page แบรนด์ AIS พร้อมเปิด Track ได้ว่าลูกค้าเปิดอ่านหรือยัง',
+    wfArchLabel: 'สถาปัตยกรรมระบบ:',
+
     // Modals
     modalClose: 'ปิด',
     modalCloseWindow: 'ปิดหน้าต่าง',
@@ -203,6 +221,24 @@ const I18N = {
     edsSupportVal: 'Enterprise Call Center 1149 Hotline',
     edsBtnCopyQuote: 'Copy Quotation Summary',
     edsBtnForwardPresales: 'Forward to Presales Form',
+
+    // Workflow Section
+    wfTitle: 'Sales Lifecycle Workflow (End-to-End)',
+    wfSubtitle: 'Seamlessly links Presales requests, Sales Kit generation, and client read tracking',
+    wfRoleBadge: 'Role-Based Access Control',
+    wfExpandAll: 'Expand all',
+    wfCollapseAll: 'Collapse all',
+    wfReadMore: 'Read more...',
+    wfShowLess: 'Show less',
+    wfStep1Title: 'Presales Support Request',
+    wfStep1Desc: 'Sales submits customer details; system automatically notifies the Presales team with real-time status tracking.',
+    wfStep2Title: 'Content Approval Request',
+    wfStep2Desc: 'Select content set, Product Owner validates accuracy, system instantly generates a custom link for the client.',
+    wfStep3Title: 'Content Review & Expiry',
+    wfStep3Desc: 'Automated alerts when assets or pricing expire; owners update new versions so sales always uses up-to-date collateral.',
+    wfStep4Title: 'Customer Sales Kit',
+    wfStep4Desc: 'Bundles selected materials into an AIS-branded landing page with read tracking to monitor client engagement.',
+    wfArchLabel: 'System Architecture:',
 
     // Modals
     modalClose: 'Close',
@@ -768,6 +804,32 @@ function updateLanguageUI() {
   if (elBtnCopy) elBtnCopy.innerText = t.edsBtnCopyQuote;
   const elBtnFwd = document.getElementById('edsBtnForwardPresalesText');
   if (elBtnFwd) elBtnFwd.innerText = t.edsBtnForwardPresales;
+
+  // Workflow Section
+  const elWfTitle = document.getElementById('wfSectionTitleText');
+  if (elWfTitle) elWfTitle.innerText = t.wfTitle;
+  const elWfSub = document.getElementById('wfSectionSubtitle');
+  if (elWfSub) elWfSub.innerText = t.wfSubtitle;
+  const elWfRole = document.getElementById('wfRoleBadgeText');
+  if (elWfRole) elWfRole.innerText = t.wfRoleBadge;
+  const elWfToggleAll = document.getElementById('wfToggleAllText');
+  if (elWfToggleAll) {
+    elWfToggleAll.innerText = (typeof workflowExpanded !== 'undefined' && workflowExpanded) ? t.wfCollapseAll : t.wfExpandAll;
+  }
+  const elWfArch = document.getElementById('wfArchLabel');
+  if (elWfArch) elWfArch.innerText = t.wfArchLabel;
+
+  for (let i = 1; i <= 4; i++) {
+    const elTitle = document.getElementById(`wfStep${i}Title`);
+    if (elTitle) elTitle.innerText = t[`wfStep${i}Title`];
+    const elDesc = document.getElementById(`wfDesc${i}`);
+    if (elDesc) elDesc.innerText = t[`wfStep${i}Desc`];
+    const elBtn = document.getElementById(`wfBtnText${i}`);
+    if (elBtn) {
+      const isExpanded = elDesc && !elDesc.classList.contains('hidden');
+      elBtn.innerText = isExpanded ? t.wfShowLess : t.wfReadMore;
+    }
+  }
 
   if (typeof updateEdsPriceCalc === 'function') {
     updateEdsPriceCalc();

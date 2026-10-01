@@ -642,60 +642,117 @@
     </div>
 
     <!-- SALES WORKFLOW & ARCHITECTURE FOOTER BAR -->
-    <section class="bg-white rounded-2xl border border-slate-200 p-6 shadow-xs space-y-5">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-3">
+    <section class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-xs space-y-5 transition">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 dark:border-slate-800 pb-3">
         <div>
-          <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2">
-            <i data-lucide="git-branch" class="w-4 h-4 text-ais-darkgreen"></i>
-            WORKFLOW สนับสนุนงานขายครบวงจร (Sales Lifecycle Workflow)
+          <h3 class="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2">
+            <i data-lucide="git-branch" class="w-4 h-4 text-ais-darkgreen dark:text-lime-400"></i>
+            <span id="wfSectionTitleText">WORKFLOW สนับสนุนงานขายครบวงจร (Sales Lifecycle Workflow)</span>
           </h3>
-          <p class="text-xs text-slate-500">เชื่อมโยงระบบขอ Presales, ระบบสร้าง Sales Kit และการติดตามสถานะการเปิดอ่านของลูกค้า</p>
+          <p id="wfSectionSubtitle" class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">เชื่อมโยงระบบขอ Presales, ระบบสร้าง Sales Kit และการติดตามสถานะการเปิดอ่านของลูกค้า</p>
         </div>
-        <div class="flex items-center gap-2 text-xs text-slate-500">
-          <span class="inline-flex items-center gap-1 bg-slate-100 px-2.5 py-1 rounded-md">
-            <i data-lucide="shield" class="w-3.5 h-3.5 text-slate-600"></i> Role-Based Access Control
+        <div class="flex items-center gap-2 text-xs flex-wrap">
+          <button type="button" onclick="toggleAllWorkflowSteps()" class="inline-flex items-center gap-1.5 bg-lime-50 dark:bg-slate-800 hover:bg-lime-100 dark:hover:bg-slate-750 text-ais-darkgreen dark:text-lime-400 border border-lime-200/90 dark:border-slate-700 px-2.5 py-1 rounded-md font-semibold cursor-pointer transition">
+            <i id="wfToggleAllIcon" data-lucide="chevrons-down" class="w-3.5 h-3.5 transition-transform duration-200"></i>
+            <span id="wfToggleAllText">ดูคำอธิบายทั้งหมด</span>
+          </button>
+          <span class="inline-flex items-center gap-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200/60 dark:border-slate-700">
+            <i data-lucide="shield" class="w-3.5 h-3.5 text-slate-500 dark:text-slate-400"></i>
+            <span id="wfRoleBadgeText">Role-Based Access Control</span>
           </span>
         </div>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <!-- Step 1 -->
-        <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50 relative">
-          <div class="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center text-xs font-bold mb-2">1</div>
-          <h4 class="text-xs font-bold text-slate-900">ขอ Presales Support</h4>
-          <p class="text-[11px] text-slate-500 mt-1">Sales ส่งคำขอพร้อมรายละเอียดลูกค้า ระบบแจ้งเตือนทีม Presales อัตโนมัติและติดตามสถานะได้เรียลไทม์</p>
+        <div class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-850 relative transition hover:border-slate-300 dark:hover:border-slate-700 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <div class="w-6 h-6 rounded-full bg-slate-900 dark:bg-slate-700 text-white flex items-center justify-center text-xs font-bold shrink-0">1</div>
+              <span class="text-[10px] text-slate-400 dark:text-slate-500 font-mono">Step 1</span>
+            </div>
+            <h4 id="wfStep1Title" class="text-xs font-bold text-slate-900 dark:text-white">ขอ Presales Support</h4>
+          </div>
+          <div class="mt-2.5">
+            <button type="button" onclick="toggleWorkflowStep(1)" class="text-[11px] font-semibold text-ais-darkgreen dark:text-lime-400 hover:text-emerald-700 dark:hover:text-lime-300 flex items-center gap-1 cursor-pointer transition group">
+              <span id="wfBtnText1">อ่านเพิ่มเติม (Read more)...</span>
+              <i id="wfIcon1" data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-y-0.5"></i>
+            </button>
+            <div id="wfDesc1" class="hidden mt-2 pt-2 border-t border-slate-200/80 dark:border-slate-750 text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed">
+              Sales ส่งคำขอพร้อมรายละเอียดลูกค้า ระบบแจ้งเตือนทีม Presales อัตโนมัติและติดตามสถานะได้เรียลไทม์
+            </div>
+          </div>
         </div>
 
         <!-- Step 2 -->
-        <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50 relative">
-          <div class="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center text-xs font-bold mb-2">2</div>
-          <h4 class="text-xs font-bold text-slate-900">ขออนุมัติส่งข้อมูลให้ลูกค้า</h4>
-          <p class="text-[11px] text-slate-500 mt-1">เลือกชุดข้อมูลที่ต้องการส่ง Product Owner ตรวจสอบความถูกต้อง ระบบสร้าง Custom Link ให้ส่งลูกค้าทันที</p>
+        <div class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-850 relative transition hover:border-slate-300 dark:hover:border-slate-700 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <div class="w-6 h-6 rounded-full bg-slate-900 dark:bg-slate-700 text-white flex items-center justify-center text-xs font-bold shrink-0">2</div>
+              <span class="text-[10px] text-slate-400 dark:text-slate-500 font-mono">Step 2</span>
+            </div>
+            <h4 id="wfStep2Title" class="text-xs font-bold text-slate-900 dark:text-white">ขออนุมัติส่งข้อมูลให้ลูกค้า</h4>
+          </div>
+          <div class="mt-2.5">
+            <button type="button" onclick="toggleWorkflowStep(2)" class="text-[11px] font-semibold text-ais-darkgreen dark:text-lime-400 hover:text-emerald-700 dark:hover:text-lime-300 flex items-center gap-1 cursor-pointer transition group">
+              <span id="wfBtnText2">อ่านเพิ่มเติม (Read more)...</span>
+              <i id="wfIcon2" data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-y-0.5"></i>
+            </button>
+            <div id="wfDesc2" class="hidden mt-2 pt-2 border-t border-slate-200/80 dark:border-slate-750 text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed">
+              เลือกชุดข้อมูลที่ต้องการส่ง Product Owner ตรวจสอบความถูกต้อง ระบบสร้าง Custom Link ให้ส่งลูกค้าทันที
+            </div>
+          </div>
         </div>
 
         <!-- Step 3 -->
-        <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50 relative">
-          <div class="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center text-xs font-bold mb-2">3</div>
-          <h4 class="text-xs font-bold text-slate-900">Content Review & Expiry</h4>
-          <p class="text-[11px] text-slate-500 mt-1">ระบบเตือนเมื่อข้อมูลหรือราคาหมดอายุ Owner อัปเดตเวอร์ชันใหม่ มั่นใจได้ว่าข้อมูลที่ Sales ใช้สดใหม่อยู่เสมอ</p>
+        <div class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-850 relative transition hover:border-slate-300 dark:hover:border-slate-700 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <div class="w-6 h-6 rounded-full bg-slate-900 dark:bg-slate-700 text-white flex items-center justify-center text-xs font-bold shrink-0">3</div>
+              <span class="text-[10px] text-slate-400 dark:text-slate-500 font-mono">Step 3</span>
+            </div>
+            <h4 id="wfStep3Title" class="text-xs font-bold text-slate-900 dark:text-white">Content Review & Expiry</h4>
+          </div>
+          <div class="mt-2.5">
+            <button type="button" onclick="toggleWorkflowStep(3)" class="text-[11px] font-semibold text-ais-darkgreen dark:text-lime-400 hover:text-emerald-700 dark:hover:text-lime-300 flex items-center gap-1 cursor-pointer transition group">
+              <span id="wfBtnText3">อ่านเพิ่มเติม (Read more)...</span>
+              <i id="wfIcon3" data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-y-0.5"></i>
+            </button>
+            <div id="wfDesc3" class="hidden mt-2 pt-2 border-t border-slate-200/80 dark:border-slate-750 text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed">
+              ระบบเตือนเมื่อข้อมูลหรือราคาหมดอายุ Owner อัปเดตเวอร์ชันใหม่ มั่นใจได้ว่าข้อมูลที่ Sales ใช้สดใหม่อยู่เสมอ
+            </div>
+          </div>
         </div>
 
         <!-- Step 4 -->
-        <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50 relative">
-          <div class="w-6 h-6 rounded-full bg-ais-darkgreen text-white flex items-center justify-center text-xs font-bold mb-2">4</div>
-          <h4 class="text-xs font-bold text-slate-900">Sales Kit สำหรับลูกค้า</h4>
-          <p class="text-[11px] text-slate-500 mt-1">รวบรวมเนื้อหาที่เลือก สร้างเป็นหน้า Landing Page แบรนด์ AIS พร้อมเปิด Track ได้ว่าลูกค้าเปิดอ่านหรือยัง</p>
+        <div class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-850 relative transition hover:border-slate-300 dark:hover:border-slate-700 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <div class="w-6 h-6 rounded-full bg-ais-darkgreen dark:bg-lime-500 text-white dark:text-slate-950 flex items-center justify-center text-xs font-bold shrink-0 shadow-xs">4</div>
+              <span class="text-[10px] text-slate-400 dark:text-slate-500 font-mono">Step 4</span>
+            </div>
+            <h4 id="wfStep4Title" class="text-xs font-bold text-slate-900 dark:text-white">Sales Kit สำหรับลูกค้า</h4>
+          </div>
+          <div class="mt-2.5">
+            <button type="button" onclick="toggleWorkflowStep(4)" class="text-[11px] font-semibold text-ais-darkgreen dark:text-lime-400 hover:text-emerald-700 dark:hover:text-lime-300 flex items-center gap-1 cursor-pointer transition group">
+              <span id="wfBtnText4">อ่านเพิ่มเติม (Read more)...</span>
+              <i id="wfIcon4" data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-y-0.5"></i>
+            </button>
+            <div id="wfDesc4" class="hidden mt-2 pt-2 border-t border-slate-200/80 dark:border-slate-750 text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed">
+              รวบรวมเนื้อหาที่เลือก สร้างเป็นหน้า Landing Page แบรนด์ AIS พร้อมเปิด Track ได้ว่าลูกค้าเปิดอ่านหรือยัง
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- Tech Stack Info -->
-      <div class="pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-500">
-        <div class="flex items-center gap-3">
-          <span class="font-semibold text-slate-700">สถาปัตยกรรมระบบ:</span>
-          <span class="inline-flex items-center gap-1 bg-purple-50 text-purple-700 px-2 py-0.5 rounded font-medium border border-purple-100">Power Apps</span>
-          <span class="inline-flex items-center gap-1 bg-teal-50 text-teal-700 px-2 py-0.5 rounded font-medium border border-teal-100">SharePoint Lists</span>
-          <span class="inline-flex items-center gap-1 bg-blue-50 text-blue-700 px-2 py-0.5 rounded font-medium border border-blue-100">Power Automate</span>
-          <span class="inline-flex items-center gap-1 bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded font-medium border border-indigo-100">Microsoft Teams</span>
+      <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
+        <div class="flex items-center gap-2.5 flex-wrap">
+          <span id="wfArchLabel" class="font-semibold text-slate-700 dark:text-slate-300">สถาปัตยกรรมระบบ:</span>
+          <span class="inline-flex items-center gap-1 bg-purple-50 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300 px-2 py-0.5 rounded font-medium border border-purple-100 dark:border-purple-900">Power Apps</span>
+          <span class="inline-flex items-center gap-1 bg-teal-50 dark:bg-teal-950/60 text-teal-700 dark:text-teal-300 px-2 py-0.5 rounded font-medium border border-teal-100 dark:border-teal-900">SharePoint Lists</span>
+          <span class="inline-flex items-center gap-1 bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 px-2 py-0.5 rounded font-medium border border-blue-100 dark:border-blue-900">Power Automate</span>
+          <span class="inline-flex items-center gap-1 bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 px-2 py-0.5 rounded font-medium border border-indigo-100 dark:border-indigo-900">Microsoft Teams</span>
         </div>
         <div>
           <span>“Build a Strong Digital Foundation for SME Success”</span>
@@ -1748,6 +1805,10 @@
       if (urlIndustry && ['office', 'factory', 'hotel', 'retail', 'logistics', 'all'].includes(urlIndustry)) {
         setIndustry(urlIndustry);
       }
+      const urlWf = new URLSearchParams(window.location.search).get('workflow');
+      if (urlWf === 'open') {
+        toggleAllWorkflowSteps();
+      }
       lucide.createIcons();
     });
 
@@ -2141,6 +2202,68 @@
       }
 
       showToast(isEn ? `Filtered context: ${indNames[ind]}` : `กรองบริบท Story สำหรับ: ${indNames[ind]}`);
+      lucide.createIcons();
+    }
+
+    // WORKFLOW ACCORDION / READ MORE HANDLERS
+    let workflowExpanded = false;
+
+    function toggleWorkflowStep(stepNum) {
+      const desc = document.getElementById(`wfDesc${stepNum}`);
+      const btnText = document.getElementById(`wfBtnText${stepNum}`);
+      const icon = document.getElementById(`wfIcon${stepNum}`);
+      if (!desc) return;
+
+      const isHidden = desc.classList.contains('hidden');
+      const isEn = typeof currentLanguage !== 'undefined' && currentLanguage === 'en';
+
+      if (isHidden) {
+        desc.classList.remove('hidden');
+        if (btnText) btnText.innerText = isEn ? 'Show less' : 'ย่อลง (Show less)';
+        if (icon) icon.classList.add('rotate-180');
+      } else {
+        desc.classList.add('hidden');
+        if (btnText) btnText.innerText = isEn ? 'Read more...' : 'อ่านเพิ่มเติม (Read more)...';
+        if (icon) icon.classList.remove('rotate-180');
+      }
+      lucide.createIcons();
+    }
+
+    function toggleAllWorkflowSteps() {
+      workflowExpanded = !workflowExpanded;
+      const isEn = typeof currentLanguage !== 'undefined' && currentLanguage === 'en';
+      const toggleAllText = document.getElementById('wfToggleAllText');
+      const toggleAllIcon = document.getElementById('wfToggleAllIcon');
+
+      for (let i = 1; i <= 4; i++) {
+        const desc = document.getElementById(`wfDesc${i}`);
+        const btnText = document.getElementById(`wfBtnText${i}`);
+        const icon = document.getElementById(`wfIcon${i}`);
+        if (desc) {
+          if (workflowExpanded) {
+            desc.classList.remove('hidden');
+            if (btnText) btnText.innerText = isEn ? 'Show less' : 'ย่อลง (Show less)';
+            if (icon) icon.classList.add('rotate-180');
+          } else {
+            desc.classList.add('hidden');
+            if (btnText) btnText.innerText = isEn ? 'Read more...' : 'อ่านเพิ่มเติม (Read more)...';
+            if (icon) icon.classList.remove('rotate-180');
+          }
+        }
+      }
+
+      if (toggleAllText) {
+        toggleAllText.innerText = workflowExpanded 
+          ? (isEn ? 'Collapse all' : 'ย่อทั้งหมด') 
+          : (isEn ? 'Expand all' : 'ดูคำอธิบายทั้งหมด');
+      }
+      if (toggleAllIcon) {
+        if (workflowExpanded) {
+          toggleAllIcon.classList.add('rotate-180');
+        } else {
+          toggleAllIcon.classList.remove('rotate-180');
+        }
+      }
       lucide.createIcons();
     }
 
