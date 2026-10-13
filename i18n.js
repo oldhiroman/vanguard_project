@@ -395,7 +395,7 @@ const PILLARS_EN = [
                 <p class="leading-relaxed">“Close the visit by collecting contact details to send a tailored quotation or schedule an AIS Presales site survey.”</p>
               </div>
             `,
-            src: 'Sale_Factory_nikom.mov',
+            src: 'Sale_Factory_nikom.mp4',
             duration: '4:32 mins',
             industry: 'factory'
           }
