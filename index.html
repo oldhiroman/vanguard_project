@@ -195,6 +195,12 @@
             <span id="btnExecDeckText">Executive Pitch</span>
           </button>
 
+          <!-- Cartoon Story Button (New) -->
+          <a href="storytelling_cartoon.html" target="_blank" class="flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-emerald-500 to-lime-500 hover:from-emerald-600 hover:to-lime-600 text-slate-950 font-black rounded-lg text-xs shadow-xs transition cursor-pointer" title="เปิดการ์ตูน Storytelling นำเสนอแนวคิด Sales Hub">
+            <span class="text-sm">🎨</span>
+            <span id="btnCartoonStoryText">Cartoon Story</span>
+          </a>
+
           <!-- PitchBot Button -->
           <button onclick="openPitchBotModal()" class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-violet-600 to-indigo-600 text-white rounded-lg text-xs font-semibold shadow-xs hover:opacity-95 transition">
             <i data-lucide="bot" class="w-3.5 h-3.5 text-lime-300"></i>
@@ -486,6 +492,26 @@
             <div id="storytellingCardsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-2.5">
               <!-- Rendered dynamically by renderActiveSolution() -->
             </div>
+          </div>
+        </div>
+
+        <!-- BC FIELD SALES PITCH SECTION (Below Storytelling Pitch Box) -->
+        <div id="fieldSalesPitchSection" class="bg-gradient-to-br from-emerald-50/70 via-teal-50/40 to-lime-50/40 dark:from-slate-800/95 dark:via-slate-800/90 dark:to-slate-900 rounded-xl p-4 border border-emerald-200/90 dark:border-emerald-800/60 shadow-2xs">
+          <div class="flex items-center justify-between mb-2.5 flex-wrap gap-2">
+            <div class="flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-emerald-600 dark:bg-emerald-500 text-white flex items-center justify-center text-xs font-bold shadow-2xs">
+                <i data-lucide="clapperboard" class="w-3.5 h-3.5 text-lime-300"></i>
+              </span>
+              <h3 id="fieldSalesSectionHeading" class="text-sm font-bold text-slate-900 dark:text-white">
+                วิดีโอตัวอย่างการออกไปขายจริงของ BC (Field Sales Pitch)
+              </h3>
+            </div>
+            <span id="fieldSalesSectionBadge" class="text-[10px] bg-emerald-100 dark:bg-emerald-950/90 text-emerald-800 dark:text-emerald-300 font-semibold px-2.5 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800">
+              1 คลิปลงพื้นที่จริง • ลูกค้าโรงงาน & นิคมฯ
+            </span>
+          </div>
+          <div id="fieldSalesCardsContainer" class="grid grid-cols-1 gap-2.5">
+            <!-- Rendered dynamically by renderActiveSolution() -->
           </div>
         </div>
 
@@ -1342,8 +1368,7 @@
 
       <!-- Video Player (Theater 16:9 View) -->
       <div class="w-full aspect-video rounded-xl overflow-hidden bg-black shadow-2xl border border-slate-800 relative">
-        <video id="storytellingPopupVideoPlayer" class="w-full h-full object-contain bg-black" controls playsinline preload="auto">
-          <source src="BusinessSrisawad-Power-1979.mp4" type="video/mp4">
+        <video id="storytellingPopupVideoPlayer" src="BusinessSrisawad-Power-1979.mp4" class="w-full h-full object-contain bg-black" controls playsinline preload="metadata">
           บราวเซอร์ของคุณไม่รองรับการเล่นวิดีโอ HTML5
         </video>
       </div>
@@ -1494,6 +1519,28 @@
                 `,
                 src: 'Business-KTIS_001_720p.mp4',
                 duration: '2:01 นาที',
+                industry: 'factory'
+              }
+            ],
+            fieldSalesVideos: [
+              {
+                id: 'factory-nikom-sale',
+                title: 'ตัวอย่างการออกไปขายจริง: ลูกค้าโรงงาน & นิคมอุตสาหกรรม',
+                modalTitle: 'วิดีโอตัวอย่างการออกไปขายจริงของ BC: ลูกค้าโรงงาน & นิคมอุตสาหกรรม',
+                badge: 'BC Field Sales Pitch • ลงพื้นที่โรงงานจริง',
+                icon: 'clapperboard',
+                tag: 'ตัวอย่างการลงพื้นที่ขายลูกค้าโรงงาน & นิคมฯ (Field Sales Pitch)',
+                sub: 'ชมตัวอย่างการลงพื้นที่เข้าพบลูกค้าโรงงานในนิคมอุตสาหกรรมจริงของทีม BC เทคนิคการเปิดประเด็นถามปัญหาเน็ตเดิม การเช็คพิกัดหน้างาน และการนำเสนอโซลูชัน EDS • ความยาว 4:32 นาที',
+                desc: 'วิดีโอตัวอย่างการปฏิบัติงานจริงของทีมขาย BC ในการออกไปพบลูกค้ากลุ่มโรงงานและนิคมอุตสาหกรรม สาธิตขั้นตอนการพูดคุยเปิดประเด็น การสำรวจความต้องการหน้างาน และการแนะนำ AIS Corporate Internet (EDS) อย่างเป็นธรรมชาติ',
+                pitchTip: `
+                  <div class="space-y-1.5">
+                    <p class="leading-relaxed">“เริ่มจากการพูดคุยถามปัญหาการใช้งานจริงของโรงงาน เช่น ระบบ ERP/คลังสินค้า หรือการเชื่อมโยงข้อมูลระหว่างโรงงานกับสำนักงานใหญ่ เพื่อค้นหา Pain Point ก่อนลงรายละเอียดสเปก”</p>
+                    <p class="leading-relaxed">“ใช้เครื่องมือเช็คพิกัดหน้างานพร้อมชี้จุดเด่นของ EDS เรื่องท่อตรง Dedicated 1:1, Fixed IP และการรับประกันเวลาซ่อมด่วน SLA 4 ชม. ที่ช่วยให้สายการผลิตไม่สะดุด”</p>
+                    <p class="leading-relaxed">“ปิดท้ายด้วยการขอข้อมูลผู้ติดต่อหรือนัดหมายส่งใบเสนอราคา/ทีมวิศวกร Presales เข้าสำรวจพื้นที่จริง”</p>
+                  </div>
+                `,
+                src: 'Sale_Factory_nikom.mov',
+                duration: '4:32 นาที',
                 industry: 'factory'
               }
             ],
@@ -1778,6 +1825,8 @@
     let currentSolutionId = 'biz-fibre';
     let currentIndustry = 'all';
     let currentStoryVideos = [];
+    let currentFieldSalesVideos = [];
+    let activeModalVideoList = [];
     let currentStoryVideoIndex = 0;
 
     // INITIALIZATION
@@ -2162,6 +2211,93 @@
         if (storyPopupPlayer) {
           storyPopupPlayer.pause();
         }
+      }
+
+      // BC Field Sales Pitch Video Section handling
+      const fieldSalesSec = document.getElementById('fieldSalesPitchSection');
+      const fieldSalesContainer = document.getElementById('fieldSalesCardsContainer');
+      const fieldSalesHeading = document.getElementById('fieldSalesSectionHeading');
+      const fieldSalesBadge = document.getElementById('fieldSalesSectionBadge');
+
+      currentFieldSalesVideos = (sol.fieldSalesVideos && sol.fieldSalesVideos.length > 0) ? sol.fieldSalesVideos : [];
+
+      if (currentFieldSalesVideos.length > 0) {
+        if (fieldSalesSec) fieldSalesSec.classList.remove('hidden');
+        if (fieldSalesHeading) {
+          fieldSalesHeading.innerText = isEnSol
+            ? 'BC Field Sales Pitch Example (Real Factory Visit)'
+            : 'วิดีโอตัวอย่างการออกไปขายจริงของ BC (Field Sales Pitch)';
+        }
+        if (fieldSalesBadge) {
+          fieldSalesBadge.innerText = isEnSol
+            ? `${currentFieldSalesVideos.length} Real Field Pitch Clip${currentFieldSalesVideos.length > 1 ? 's' : ''} • Factory & Industrial Estate`
+            : `${currentFieldSalesVideos.length} คลิปลงพื้นที่จริง • ลูกค้าโรงงาน & นิคมฯ`;
+        }
+        if (fieldSalesContainer) {
+          fieldSalesContainer.className = currentFieldSalesVideos.length > 1
+            ? 'grid grid-cols-1 md:grid-cols-2 gap-2.5'
+            : 'grid grid-cols-1 gap-2.5';
+
+          fieldSalesContainer.innerHTML = currentFieldSalesVideos.map((v, idx) => {
+            const iconName = v.icon || 'clapperboard';
+            const isMatchInd = (currentIndustry !== 'all' && v.industry === currentIndustry);
+            return `
+              <div onclick="openFieldSalesVideoModal(${idx})" class="group bg-white dark:bg-slate-800/90 hover:bg-emerald-50/60 dark:hover:bg-slate-750 p-3.5 sm:p-4 rounded-xl border ${isMatchInd ? 'border-2 border-emerald-500 shadow-md ring-2 ring-emerald-500/20' : 'border border-emerald-200/90 dark:border-slate-700 hover:border-ais-green dark:hover:border-lime-500 shadow-xs hover:shadow-md'} transition cursor-pointer flex flex-col justify-between gap-3">
+                <div class="flex items-start gap-3">
+                  <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-600 to-teal-800 text-white flex items-center justify-center shrink-0 shadow-md shadow-emerald-600/20 group-hover:scale-105 transition mt-0.5">
+                    <i data-lucide="${iconName}" class="w-5 h-5 text-lime-300"></i>
+                  </div>
+                  <div class="min-w-0 flex-1">
+                    <div class="flex items-center gap-1.5 flex-wrap">
+                      <span class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white group-hover:text-ais-darkgreen dark:group-hover:text-lime-400 transition">
+                        ${v.title}
+                      </span>
+                      ${isMatchInd ? `
+                        <span class="text-[9px] bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 font-bold px-1.5 py-0.5 rounded-full border border-emerald-300 dark:border-emerald-700 flex items-center gap-0.5">
+                          <i data-lucide="check" class="w-2.5 h-2.5"></i>
+                          <span>${isEnSol ? 'Matches Industry' : 'ตรงกลุ่มที่เลือก'}</span>
+                        </span>
+                      ` : ''}
+                    </div>
+                    <div class="flex items-center gap-1.5 mt-1 flex-wrap">
+                      <span class="text-[10px] bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 font-semibold px-2 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800">
+                        ${v.badge}
+                      </span>
+                      <span class="text-[10px] text-slate-500 dark:text-slate-400 font-medium">
+                        ⏱️ ${v.duration || ''}
+                      </span>
+                      <span class="text-[10px] bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 font-mono px-1.5 py-0.5 rounded">
+                        ${v.src}
+                      </span>
+                    </div>
+                    <p class="text-[11px] text-slate-600 dark:text-slate-300 mt-1.5 leading-relaxed">
+                      ${v.sub}
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between pt-2.5 border-t border-slate-100 dark:border-slate-700/60 text-xs flex-wrap gap-2">
+                  <span class="text-[11px] font-medium text-slate-500 dark:text-slate-400 flex items-center gap-1">
+                    <i data-lucide="video" class="w-3.5 h-3.5 text-emerald-600 dark:text-lime-400"></i>
+                    <span>${v.tag || (isEnSol ? 'Watch Field Sales Video' : 'คลิกดูวิดีโอตัวอย่างการขาย')}</span>
+                  </span>
+                  <div class="flex items-center gap-2">
+                    <a href="${v.src}" download onclick="event.stopPropagation()" class="px-2.5 py-1 bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 font-semibold rounded-lg text-[11px] flex items-center gap-1 transition">
+                      <i data-lucide="download" class="w-3 h-3"></i>
+                      <span>${isEnSol ? 'Download' : 'ดาวน์โหลด'}</span>
+                    </a>
+                    <span class="px-3 py-1 bg-emerald-600 group-hover:bg-emerald-500 text-white font-bold rounded-lg text-[11px] flex items-center gap-1 shadow-xs transition">
+                      <i data-lucide="play-circle" class="w-3.5 h-3.5 text-lime-300"></i>
+                      <span>${isEnSol ? 'Watch (Pop-up)' : 'ดูวิดีโอ (Pop-up)'}</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            `;
+          }).join('');
+        }
+      } else {
+        if (fieldSalesSec) fieldSalesSec.classList.add('hidden');
+        if (fieldSalesContainer) fieldSalesContainer.innerHTML = '';
       }
 
       lucide.createIcons();
@@ -3681,14 +3817,24 @@
 
     function openStorytellingVideoModal(index = 0) {
       if (!currentStoryVideos || currentStoryVideos.length === 0) return;
-      currentStoryVideoIndex = (typeof index === 'number' && index >= 0 && index < currentStoryVideos.length) ? index : 0;
+      activeModalVideoList = currentStoryVideos;
+      currentStoryVideoIndex = (typeof index === 'number' && index >= 0 && index < activeModalVideoList.length) ? index : 0;
+      openModal('storytellingVideoModal');
+      updateStoryVideoInModal(currentStoryVideoIndex, true);
+    }
+
+    function openFieldSalesVideoModal(index = 0) {
+      if (!currentFieldSalesVideos || currentFieldSalesVideos.length === 0) return;
+      activeModalVideoList = currentFieldSalesVideos;
+      currentStoryVideoIndex = (typeof index === 'number' && index >= 0 && index < activeModalVideoList.length) ? index : 0;
       openModal('storytellingVideoModal');
       updateStoryVideoInModal(currentStoryVideoIndex, true);
     }
 
     function updateStoryVideoInModal(index, autoPlay = true) {
+      const list = (activeModalVideoList && activeModalVideoList.length > 0) ? activeModalVideoList : currentStoryVideos;
       currentStoryVideoIndex = index;
-      const vidData = currentStoryVideos[index];
+      const vidData = list[index];
       if (!vidData) return;
 
       const titleEl = document.getElementById('storyModalHeaderTitle');
@@ -3706,6 +3852,7 @@
 
       if (player) {
         if (player.getAttribute('src') !== vidData.src) {
+          player.setAttribute('src', vidData.src);
           player.src = vidData.src;
           player.load();
         }
@@ -3718,9 +3865,9 @@
       // Render or update tabs
       const tabsContainer = document.getElementById('storyModalTabsContainer');
       if (tabsContainer) {
-        if (currentStoryVideos.length > 1) {
+        if (list.length > 1) {
           tabsContainer.classList.remove('hidden');
-          tabsContainer.innerHTML = currentStoryVideos.map((v, i) => {
+          tabsContainer.innerHTML = list.map((v, i) => {
             const isActive = i === index;
             const iconName = v.icon || (i === 0 ? 'building-2' : 'factory');
             return `

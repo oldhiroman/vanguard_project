@@ -107,6 +107,7 @@ Vanguard Sales Hub is architected for zero-latency, high reliability, and zero b
 ```
 vanguard_project/
 ├── index.html                 # Main Single Page Application (SPA)
+├── storytelling_cartoon.html  # Cartoon Storytelling Web Presentation Deck
 ├── executive_deck.html        # 4-Slide Boardroom Deck with Speaker Notes
 ├── release_notes_v1.html      # Printable HTML Version 1.0 Release Notes
 ├── draft_quotation.js         # AWN Quotation Generator Engine & Thai BahtText
@@ -127,9 +128,10 @@ vanguard_project/
 ## 🚀 Quick Start Guide
 
 ### Option 1: Open Directly in Browser
-Double-click `index.html` or open it with any modern web browser (Google Chrome, Microsoft Edge, Safari, Mozilla Firefox):
+Double-click `index.html` or `storytelling_cartoon.html` in any modern web browser:
 ```bash
-open index.html
+open storytelling_cartoon.html  # เปิดดูการ์ตูน Storytelling พรีเซนต์แนวคิดเว็บ
+open index.html                 # เปิดใช้งาน Sales Hub ตัวจริง
 ```
 
 ### Option 2: Local HTTP Server (Recommended)
@@ -139,12 +141,10 @@ Using Python 3:
 ```bash
 python3 -m http.server 8080
 ```
-Then navigate to: `http://localhost:8080` in your web browser.
-
-To view the Executive Presentation Deck:
-```
-http://localhost:8080/executive_deck.html
-```
+Then navigate to:
+- **Cartoon Storytelling Presentation:** `http://localhost:8080/storytelling_cartoon.html`
+- **Main Sales Hub:** `http://localhost:8080/index.html`
+- **Executive Presentation Deck:** `http://localhost:8080/executive_deck.html`
 
 ---
 

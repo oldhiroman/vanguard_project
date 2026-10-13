@@ -378,6 +378,28 @@ const PILLARS_EN = [
             industry: 'factory'
           }
         ],
+        fieldSalesVideos: [
+          {
+            id: 'factory-nikom-sale',
+            title: 'Live BC Field Sales Pitch: Factory & Industrial Estate Customer',
+            modalTitle: 'BC Field Sales Pitch Example: Factory & Industrial Estate Customer',
+            badge: 'BC Field Sales Pitch • Real Factory Visit',
+            icon: 'clapperboard',
+            tag: 'BC Field Sales Example • Factory & Industrial Estate',
+            sub: 'Watch a real on-site sales visit by an AIS BC pitching Corporate Internet (EDS) to a factory customer in an industrial estate—covering pain-point discovery, coordinate check, and closing • 4:32 mins',
+            desc: 'Real-world field sales example demonstrating how an AIS Business Consultant approaches factory and industrial estate prospects, uncovers connectivity pain points on-site, and pitches AIS Corporate Internet (EDS).',
+            pitchTip: `
+              <div class="space-y-1.5">
+                <p class="leading-relaxed">“Start by asking about real factory operational pain points—such as ERP/warehouse system stability or HQ-to-plant links—before talking technical specs.”</p>
+                <p class="leading-relaxed">“Check site coordinates on the spot and highlight EDS Dedicated 1:1 bandwidth, Fixed IP, and 4-hour SLA repair guarantee to ensure zero production downtime.”</p>
+                <p class="leading-relaxed">“Close the visit by collecting contact details to send a tailored quotation or schedule an AIS Presales site survey.”</p>
+              </div>
+            `,
+            src: 'Sale_Factory_nikom.mov',
+            duration: '4:32 mins',
+            industry: 'factory'
+          }
+        ],
         storyVideoTitle: 'Real Customer Case Study: Srisawad Power 1979 PCL (Multi-Branch Connectivity Nationwide)',
         storyVideoBadge: 'Nationwide Multi-Branch',
         storyVideoSub: 'Click to open pop-up video story to build strong confidence for multi-branch prospects (Duration 1:50 mins)',
@@ -861,7 +883,8 @@ function getLocalizedSolution(sol) {
         storyVideoBadge: enSol.storyVideoBadge || sol.storyVideoBadge,
         storyVideoSub: enSol.storyVideoSub || sol.storyVideoSub,
         storyVideoDesc: enSol.storyVideoDesc || sol.storyVideoDesc,
-        storyVideos: enSol.storyVideos || sol.storyVideos
+        storyVideos: enSol.storyVideos || sol.storyVideos,
+        fieldSalesVideos: enSol.fieldSalesVideos || sol.fieldSalesVideos
       };
     }
   }
