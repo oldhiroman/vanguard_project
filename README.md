@@ -67,13 +67,9 @@ Solutions are structured by genuine customer business needs (*Business Needs > P
 * **Executive Dark Mode:** High-contrast, eye-friendly dark palette tailored for boardroom projectors and field tablets (iPad/Surface), while keeping the quotation paper white for print compliance.
 * **Continuous Looping Marquee Ticker:** Seamlessly rotating business bulletin announcing 2026 packages, Oracle Cloud Infrastructure (OCI), and AIS Safe Connect updates.
 
-### 6. 📊 4-Slide Executive Presentation Deck (`executive_deck.html`)
-* Boardroom-ready web-based presentation deck:
-  * **Slide 1:** The Strategic Imperative (As-Is Friction vs To-Be Single Pane of Glass)
-  * **Slide 2:** Product Architecture (The 4 Core Platform Engines)
-  * **Slide 3:** Field-Tested User Journey (5 Minutes to Close the Deal)
-  * **Slide 4:** Business Impact & Strategic Rollout Roadmap
-* Features speaker notes drawer, keyboard navigation (`←` / `→`), fullscreen mode, and print-to-PDF support.
+### 6. 📊 Presentation Decks (Executive & 7-Step Storytelling)
+* **7-Step Storytelling Deck (`presentation_deck_light.html`):** 9-Slide presentation deck built with the **AIS Light Tone Theme (`#86B817` / `#166534`)** based on the official BTS / AIS Digital Talent 7-Step Storytelling Model. Includes synchronized Thai presentation script in Speaker Notes, keyboard shortcuts, and full 16:9 PDF export support.
+* **Executive Dark Deck (`executive_deck.html`):** 4-Slide boardroom-ready presentation deck tailored for executive reviews and dark projection environments.
 
 ### 7. 🤖 AI PitchBot Assistant & Presales Fast-Track Workflow
 * **AI PitchBot:** Objection handling practice bot addressing EDS vs Home Broadband, Fixed IP necessity, SLA response guarantees, and 5G Wireless Backup.
