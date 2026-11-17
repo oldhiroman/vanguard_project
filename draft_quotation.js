@@ -67,6 +67,7 @@ function openCreateDraftQuotationModal() {
   // Random reference number in AWN format
   const randNum = String(Math.floor(1000 + Math.random() * 9000));
   const quoteNo = "AWN-" + now.getFullYear() + "-00" + randNum + "-BD86-V1";
+  const optId = "OPT-2026-040606-1152";
 
   // Default company and location info
   let companyName = "บริษัท พรีเมียร์ ดิจิทัล โซลูชันส์ จำกัด (มหาชน)";
@@ -92,6 +93,7 @@ function openCreateDraftQuotationModal() {
 
   currentDraftQuoteData = {
     quoteNo: quoteNo,
+    optId: optId,
     date: formattedDate,
     customerName: companyName,
     contactName: contactName,
@@ -123,6 +125,7 @@ function openCreateDraftQuotationModal() {
   if (document.getElementById("draftQuoteTel")) document.getElementById("draftQuoteTel").value = currentDraftQuoteData.tel;
   if (document.getElementById("draftQuoteEmail")) document.getElementById("draftQuoteEmail").value = currentDraftQuoteData.email;
   if (document.getElementById("draftQuoteNo")) document.getElementById("draftQuoteNo").value = currentDraftQuoteData.quoteNo;
+  if (document.getElementById("draftOptId")) document.getElementById("draftOptId").value = currentDraftQuoteData.optId;
   if (document.getElementById("draftQuoteDate")) document.getElementById("draftQuoteDate").value = currentDraftQuoteData.date;
 
   // Render live preview
@@ -147,6 +150,7 @@ function updateDraftQuotationPreview() {
   currentDraftQuoteData.tel = document.getElementById("draftQuoteTel")?.value || currentDraftQuoteData.tel;
   currentDraftQuoteData.email = document.getElementById("draftQuoteEmail")?.value || currentDraftQuoteData.email;
   currentDraftQuoteData.quoteNo = document.getElementById("draftQuoteNo")?.value || currentDraftQuoteData.quoteNo;
+  currentDraftQuoteData.optId = document.getElementById("draftOptId")?.value || currentDraftQuoteData.optId;
   currentDraftQuoteData.date = document.getElementById("draftQuoteDate")?.value || currentDraftQuoteData.date;
 
   const container = document.getElementById("draftQuotePreviewContainer");
@@ -246,6 +250,7 @@ function generateQuotationDocumentHTML(d) {
           <!-- Right: Quote Details -->
           <div class="col-span-4 p-2 space-y-1 bg-slate-50/50 text-[10px]">
             <div><strong>เลขที่/No :</strong> <span class="font-mono font-bold text-slate-900">${d.quoteNo}</span></div>
+            <div><strong>OPT ID :</strong> <span class="font-mono font-bold text-slate-900">${d.optId || ''}</span></div>
             <div><strong>วันที่/Date :</strong> ${d.date}</div>
             <div><strong>ชื่อ/Name :</strong> ${d.salesName}</div>
             <div><strong>โทร/Tel :</strong> ${d.salesTel}</div>
@@ -392,7 +397,7 @@ function generateQuotationDocumentHTML(d) {
             <img src="${AWN_LOGO_BASE64}" alt="AWN" style="height: 34px; width: auto;" class="shrink-0">
             <div>
               <div class="font-bold text-[11px] text-slate-900">บริษัท แอดวานซ์ ไวร์เลส เน็ทเวอร์ค จำกัด : Advanced Wireless Network Company Limited</div>
-              <div class="text-[9.5px] text-slate-500">ใบเสนอราคา / QUOTATION : เลขที่ ${d.quoteNo} (วันที่ ${d.date})</div>
+              <div class="text-[9.5px] text-slate-500">ใบเสนอราคา / QUOTATION : เลขที่ ${d.quoteNo}${d.optId ? ` • OPT ID: ${d.optId}` : ''} (วันที่ ${d.date})</div>
             </div>
           </div>
           <div class="text-right text-[9px] text-slate-400">หน้า 2 / 2 (Page 2 of 2)</div>
